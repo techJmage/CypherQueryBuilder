@@ -43,7 +43,7 @@ public abstract partial class QueryBase : Disposable
             else
             {
                 var alias = FindAlias<T>(r.EndNode);
-                if(!string.IsNullOrEmpty(alias))
+                if (!string.IsNullOrEmpty(alias))
                     return alias;
             }
         }

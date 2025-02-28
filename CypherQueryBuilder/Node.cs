@@ -199,13 +199,13 @@ public class Node(string alias) : Entity(alias)
 
     internal override string CompileToCreate(bool aliasOnly = false, Dictionary<string, object?>? parameters = null)
     {
-        var q = base.CompileToCreate(aliasOnly, parameters);
+        var q = new StringBuilder(base.CompileToCreate(aliasOnly, parameters));
         foreach (var r in Relations)
         {
             var rq = r.CompileToCreate(aliasOnly, parameters);
-            q += rq;
+            q.Append(rq);
         }
-        return q;
+        return q.ToString();
     }
 
     internal Node CreateRelationWith(Node to, string alias, string label, bool toMerge = false, object? properties = null)

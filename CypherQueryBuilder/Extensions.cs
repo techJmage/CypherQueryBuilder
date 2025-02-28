@@ -24,7 +24,7 @@ public static class Extensions
             var v = '[' + string.Join(',', strLst) + ']';
             return v;
         }
-        else if(value is DateTime dt)
+        else if (value is DateTime dt)
             return $"datetime('{dt:s}Z')";
         else if (value is DateTimeOffset dtOffet)
             return $"datetime('{dtOffet:s}Z')";
@@ -66,7 +66,7 @@ public static class Extensions
         if (attr == null)
             return t.Name;
         var cAttr = attr as CypherEntityAttribute;
-        return cAttr?.Name?? t.Name;
+        return cAttr?.Name ?? t.Name;
     }
 
     public static Node<T> AsNode<T>(this T obj, int sequence = 0)

@@ -60,7 +60,7 @@ public class Entity(string alias) : IEntity
     /// <typeparam name="T"></typeparam>
     /// <param name="obj">The object.</param>
     /// <returns></returns>
-    public virtual Entity TranslateProperties<T>([NotNull]T obj)
+    public virtual Entity TranslateProperties<T>([NotNull] T obj)
     {
         var ps = typeof(T).GetProperties();
         var filtered = ps.Select(p => new

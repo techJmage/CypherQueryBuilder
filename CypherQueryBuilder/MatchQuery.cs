@@ -50,7 +50,7 @@ public class MatchQuery : QueryBase
             if (aliasToBeRemoved && alias != null)
             {
                 var aliasRemovalLength = alias.Length + 1;
-                var withoutAlias = ps.Select(p => $"{p} AS {p.Remove(0, aliasRemovalLength)}");
+                var withoutAlias = ps.Select(p => $"{p} AS {p[aliasRemovalLength..]}");
                 returns.Add(string.Join(',', withoutAlias));
             }
             else
