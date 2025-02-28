@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CypherQueryBuilder", "CypherQueryBuilder\CypherQueryBuilder.csproj", "{BFC83BF1-9D98-4F1F-8FC2-A21AEC4A3F1E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CypherQueryBuilderTests", "CypherQueryBuilderTests\CypherQueryBuilderTests.csproj", "{C28C92BC-22A2-460E-B1C5-BA729EE0D468}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		ReleaseCI|Any CPU = ReleaseCI|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BFC83BF1-9D98-4F1F-8FC2-A21AEC4A3F1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFC83BF1-9D98-4F1F-8FC2-A21AEC4A3F1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFC83BF1-9D98-4F1F-8FC2-A21AEC4A3F1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFC83BF1-9D98-4F1F-8FC2-A21AEC4A3F1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFC83BF1-9D98-4F1F-8FC2-A21AEC4A3F1E}.ReleaseCI|Any CPU.ActiveCfg = Release|Any CPU
+		{BFC83BF1-9D98-4F1F-8FC2-A21AEC4A3F1E}.ReleaseCI|Any CPU.Build.0 = Release|Any CPU
+		{C28C92BC-22A2-460E-B1C5-BA729EE0D468}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C28C92BC-22A2-460E-B1C5-BA729EE0D468}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C28C92BC-22A2-460E-B1C5-BA729EE0D468}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C28C92BC-22A2-460E-B1C5-BA729EE0D468}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C28C92BC-22A2-460E-B1C5-BA729EE0D468}.ReleaseCI|Any CPU.ActiveCfg = Release|Any CPU
+		{C28C92BC-22A2-460E-B1C5-BA729EE0D468}.ReleaseCI|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {523D9CE4-3AA2-4163-A606-ACA606DA23FE}
+	EndGlobalSection
+EndGlobal

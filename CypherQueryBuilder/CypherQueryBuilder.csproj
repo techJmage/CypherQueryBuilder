@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net9.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<Version>1.8.3</Version>
+		<LangVersion>latest</LangVersion>
+		<Authors>Tech J Mage</Authors>
+		<Description>Cypher, OGM, Query</Description>
+		<PackageProjectUrl>https://github.com/techjmage/CypherQueryBuilder</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/techjmage/CypherQueryBuilder</RepositoryUrl>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<DocumentationFile>$(MSBuildProjectDirectory)\Documents\Readme.xml</DocumentationFile>
+		<DefaultDocumentationGeneratedPages>Assembly</DefaultDocumentationGeneratedPages>
+		<PackageReadmeFile>index.md</PackageReadmeFile>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Currying" Version="1.0.4" />
+		<PackageReference Include="Neo4j.Driver" Version="5.27.0" />
+		<PackageReference Include="DefaultDocumentation" Version="0.8.2">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="ExpressionTreeToStringWithCypher" Version="1.1.2" />
+		<PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.13.0" />
+		<PackageReference Include="Microsoft.CodeAnalysis.CSharp.Scripting" Version="4.13.0" />
+		<PackageReference Include="Utility.Disposable" Version="1.1.1" />
+		<None Include="Documents\index.md" Pack="true" PackagePath="\" />
+	</ItemGroup>
+</Project>

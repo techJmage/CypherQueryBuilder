@@ -1,0 +1,705 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CypherQueryBuilder</name>
+    </assembly>
+    <members>
+        <member name="M:CypherQueryBuilder.CreateQuery.CreateRelation(System.String,System.String,CypherQueryBuilder.Node,CypherQueryBuilder.Node,System.Boolean,System.Object)">
+            <summary>
+            Creates the relation.
+            </summary>
+            <param name="alias">The alias.</param>
+            <param name="label">The label.</param>
+            <param name="from">From.</param>
+            <param name="to">To.</param>
+            <param name="toMerge">if set to <c>true</c> [to merge].</param>
+            <param name="properties">The properties.</param>
+            <returns></returns>
+        </member>
+        <member name="M:CypherQueryBuilder.CreateQuery.Compile">
+            <summary>
+            Compiles this instance to Cypher Query string.
+            </summary>
+            <returns cref="T:System.String">Cypher Query string</returns>
+            <seealso cref="M:CypherQueryBuilder.CreateQuery.CompileWithParemeters(System.Collections.Generic.Dictionary{System.String,System.Object})"/>
+        </member>
+        <member name="M:CypherQueryBuilder.CreateQuery.CompileWithParemeters(System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>Compiles the instance to Cypher Query string with paremeters.</summary>
+            <returns cref="T:System.ValueTuple">ValueTuple&lt;string, Dictionary&lt;string, Nullable&lt;Object&gt;&gt;&gt;</returns>
+            <example>
+              <para>Usage:</para>
+              <code>var metaDataCount = 2;
+            var metaDataNodes = new Node&lt;MetaData&gt;[metaDataCount];
+            for (int i = 0; i &lt; metaDataCount; i++)
+            {
+                var id = $"mId_{i}";
+                metaDataNodes[i] = Node&lt;MetaData&gt;.Instance(i).Where(p =&gt; p.Uid == id);
+            }
+            var domainNode = Node&lt;Domain&gt;.Instance().Where(p =&gt; p.Uid == "TestDomain");
+            var (mq, parameters) = Query.Match(domainNode, metaDataNodes).CompileAsParemeterized();</code>
+            </example>
+            <seealso cref="M:CypherQueryBuilder.CreateQuery.Compile"/>
+        </member>
+        <member name="M:CypherQueryBuilder.DeleteQuery.Delete``1(``0[])">
+            <summary>
+            Deletes the specified entities.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entities">The entities to delete.</param>
+            <returns cref="T:CypherQueryBuilder.DeleteQuery">DeleteQuery</returns>
+        </member>
+        <member name="M:CypherQueryBuilder.DeleteQuery.Detach``1(``0[])">
+            <summary>
+            Detaches, i.e. delete with all the associated relations (if it is a node), the specified entities.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entities">The entities to detache and delete.</param>
+            <returns cref="T:CypherQueryBuilder.DeleteQuery">DeleteQuery</returns>
+        </member>
+        <member name="M:CypherQueryBuilder.DeleteQuery.Compile">
+            <summary>
+            Compiles this instance to Cypher Query string.
+            </summary>
+            <returns cref="T:System.String">Cypher Query string</returns>
+        </member>
+        <member name="M:CypherQueryBuilder.DeleteQuery.ReleaseResources">
+            <summary>
+            Releases the resources, used while disposing.
+            </summary>
+        </member>
+        <member name="M:CypherQueryBuilder.Entity.Compile(System.Collections.Generic.HashSet{System.String},System.Collections.Generic.Dictionary{System.String,System.Object}@)">
+            <summary>
+            Compiles the specified parameters.
+            </summary>
+            <param name="parameters">The parameters.</param>
+            <returns></returns>
+        </member>
+        <member name="M:CypherQueryBuilder.Entity.TranslateProperties``1(``0)">
+            <summary>
+            Translates the properties.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj">The object.</param>
+            <returns></returns>
+        </member>
+        <member name="M:CypherQueryBuilder.MatchQuery.Limit(System.Int32)">
+            <summary>
+            Limits the specified limit.
+            </summary>
+            <param name="limit">The limit.</param>
+            <returns cref="T:CypherQueryBuilder.MatchQuery">MatchQuery</returns>
+        </member>
+        <member name="M:CypherQueryBuilder.MatchQuery.Return(System.String[])">
+            <summary>
+            Returns the specified returns.
+            </summary>
+            <param name="returns">The returns.</param>
+            <returns></returns>
+        </member>
+        <member name="M:CypherQueryBuilder.MatchQuery.Return``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Boolean)">
+            <summary>
+            Returns the specified f.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="f">The f.</param>
+            <param name="aliasToBeRemoved">if set to <c>true</c> [alias to be removed].</param>
+            <returns></returns>
+        </member>
+        <member name="M:CypherQueryBuilder.MatchQuery.Return``1(CypherQueryBuilder.Node{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Boolean)">
+            <summary>
+            Returns the specified node.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="node">The node.</param>
+            <param name="f">The f.</param>
+            <param name="aliasToBeRemoved">if set to <c>true</c> [alias to be removed].</param>
+            <returns></returns>
+        </member>
+        <member name="M:CypherQueryBuilder.MatchQuery.Return``1(System.String,System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Boolean)">
+            <summary>
+            Returns the specified alias.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="alias">The alias.</param>
+            <param name="f">The f.</param>
+            <param name="aliasToBeRemoved"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CypherQueryBuilder.MatchQuery.Skip(System.Int32)">
+            <summary>
+            Skips the specified skip.
+            </summary>
+            <param name="skip">The skip.</param>
+            <returns></returns>
+        </member>
+        <member name="M:CypherQueryBuilder.MatchQuery.Compile">
+            <summary>
+            Compiles this instance to Cypher Query string.
+            </summary>
+            <returns cref="T:System.String">Cypher Query string</returns>
+            <seealso cref="M:CypherQueryBuilder.MatchQuery.CompileWithParemeters(System.Collections.Generic.Dictionary{System.String,System.Object})"/>
+        </member>
+        <member name="M:CypherQueryBuilder.MatchQuery.CompileWithParemeters(System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>Compiles the instance to Cypher Query string with paremeters.</summary>
+            <returns cref="T:System.ValueTuple">ValueTuple&lt;string, Dictionary&lt;string, Nullable&lt;Object&gt;&gt;&gt;</returns>
+            <example>
+              <para>Usage:</para>
+              <code>var metaDataCount = 2;
+            var metaDataNodes = new Node&lt;MetaData&gt;[metaDataCount];
+            for (int i = 0; i &lt; metaDataCount; i++)
+            {
+                var id = $"mId_{i}";
+                metaDataNodes[i] = Node&lt;MetaData&gt;.Instance(i).Where(p =&gt; p.Uid == id);
+            }
+            var domainNode = Node&lt;Domain&gt;.Instance().Where(p =&gt; p.Uid == "TestDomain");
+            var (mq, parameters) = Query.Match(domainNode, metaDataNodes).CompileAsParemeterized();</code>
+            </example>
+            <seealso cref="M:CypherQueryBuilder.MatchQuery.Compile"/>
+        </member>
+        <member name="M:CypherQueryBuilder.MatchQuery.CreateRelation(System.String,System.String,CypherQueryBuilder.Node,CypherQueryBuilder.Node,System.Boolean,System.Object)">
+            <summary>
+            Creates the relation.
+            </summary>
+            <param name="alias">The alias.</param>
+            <param name="label">The label.</param>
+            <param name="from">From.</param>
+            <param name="to">To.</param>
+            <param name="toMerge">if set to <c>true</c> [to merge].</param>
+            <param name="properties">The properties.</param>
+            <returns></returns>
+        </member>
+        <member name="M:CypherQueryBuilder.MatchQuery.Delete``1(``0[])">
+            <summary>
+            Deletes the specified entities.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entities">The entities.</param>
+            <returns></returns>
+        </member>
+        <member name="M:CypherQueryBuilder.MatchQuery.Detach``1(``0[])">
+            <summary>
+            Detaches the specified entities.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entities">The entities.</param>
+            <returns></returns>
+        </member>
+        <member name="M:CypherQueryBuilder.MatchQuery.OrWhere(System.String)">
+            <summary>
+            Ors the where.
+            </summary>
+            <param name="clause">The clause.</param>
+            <returns></returns>
+        </member>
+        <member name="M:CypherQueryBuilder.MatchQuery.Union(CypherQueryBuilder.MatchQuery)">
+            <summary>
+            Unions the specified other.
+            </summary>
+            <param name="other">The other.</param>
+            <returns></returns>
+        </member>
+        <member name="M:CypherQueryBuilder.MatchQuery.Update``2(System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Linq.Expressions.Expression{System.Func{``0,``1}},System.String)">
+            <summary>Create Update Query.</summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="K"></typeparam>
+            <param name="propertySelector"></param>
+            <param name="valueSelector"></param>
+            <param name="alias"></param>
+            <returns>
+              <c>UpdateQuery</c>
+            </returns>
+            <example>
+            <code>var r = 2010;
+            var mNode = Node&lt;Movie&gt;.Instance().Where(p =&gt; p.ReleaseYear &gt; 500);
+            var q = Query
+                .Match(mNode)
+                .Update&lt;Movie, int&gt;(p =&gt; p.ReleaseYear, p =&gt; r)
+                .Return&lt;Movie&gt;()
+                .OrderBy&lt;Movie, int&gt;(m =&gt; m.ReleaseYear)
+                .Return&lt;Movie&gt;(p =&gt; new { p.Title, p.ReleaseYear });
+            var str = q.Compile();</code></example>
+        </member>
+        <member name="M:CypherQueryBuilder.MatchQuery.Where(System.String)">
+            <summary>Wheres the specified clause.</summary>
+            <param name="clause">The clause.</param>
+            <returns>
+              <br />
+            </returns>
+            <example>
+              <code>var movie = new Movie() { ReleaseYear = 2010, Title = "Gambler" };
+            var m = movie.AsNode().Where(p =&gt; p.ReleaseYear == 2001 || p.ReleaseYear &lt; 1997 || p.Title == "D");
+            var n = new Node("n")
+                .WithLabels("Actor")
+                .WithProperty("name", "Clint Eastwood")
+                .WithRelation(m, "r", new { Role = "Hero" }, true, "ACTED_IN");
+            var q = Query
+                .Match(n).Where(m.BasicFilter)
+                .Return&lt;Movie&gt;(p =&gt; new { p.Title, p.ReleaseYear });
+            var str = q.Compile();</code>
+            </example>
+        </member>
+        <member name="M:CypherQueryBuilder.MatchQuery.Where``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.String)">
+            <summary>Wheres the specified expr.</summary>
+            <typeparam name="T"></typeparam>
+            <param name="expr">The expr.</param>
+            <param name="alias"></param>
+            <returns>
+              <br />
+            </returns>
+            <example>
+              <code>var r = 2010;
+            var actor = new Person { FullName = "Debjit", Age = 80 };
+            var mNode = Node&lt;Movie&gt;.Instance().Where(p =&gt; p.ReleaseYear &gt; 500);
+            mNode.WithRelation(actor.AsNode(), new ActedIn() { ReleaseYear = 2009 });
+            var q = Query
+                .Match(mNode)
+                .Where&lt;ActedIn&gt;(p =&gt; p.ReleaseYear &gt; 2000)
+                .Delete(mNode.Relation);
+            var str = q.Compile();</code>
+            </example>
+        </member>
+        <member name="M:CypherQueryBuilder.MatchQuery.BuildMatchPart(System.Text.StringBuilder)">
+            <summary>
+            Builds the match part.
+            </summary>
+            <param name="sb">The sb.</param>
+        </member>
+        <member name="M:CypherQueryBuilder.MatchQuery.OrderBy``2(System.Linq.Expressions.Expression{System.Func{``0,``1}},System.String)">
+            <summary>Orders the by.</summary>
+            <typeparam name="T">Entity (Node or Relation)</typeparam>
+            <typeparam name="K">The property of the T type Node or Relation on which order by will be applied.</typeparam>
+            <param name="keySelector">The key selector.</param>
+            <param name="alias">The alias.</param>
+            <returns>MatchQuery</returns>
+            <example>
+              <code>var movie = new Movie() { ReleaseYear = 2010, Title = "Gambler" };
+            var mNode = Node&lt;Movie&gt;.Instance(movie);
+            var q = Query
+                .Match(mNode, pNode)
+                .Return&lt;Movie&gt;()
+                .OrderBy&lt;Movie, int&gt;(m =&gt; m.ReleaseYear);</code>
+            </example>
+            <seealso cref="M:CypherQueryBuilder.MatchQuery.OrderByDescending``2(System.Linq.Expressions.Expression{System.Func{``0,``1}},System.String)">OrderByDescending{T, K}(Expression{Func{T, K}}, string?)</seealso>
+        </member>
+        <member name="M:CypherQueryBuilder.MatchQuery.OrderByDescending``2(System.Linq.Expressions.Expression{System.Func{``0,``1}},System.String)">
+            <summary>Orders the by descending.</summary>
+            <typeparam name="T">Entity (Node or Relation)</typeparam>
+            <typeparam name="K">The property of the T type Node or Relation on which descending order by will be applied.</typeparam>
+            <param name="keySelector">The key selector.</param>
+            <param name="alias">The alias.</param>
+            <returns>MatchQuery</returns>
+            <example>
+              <code>var movie = new Movie() { ReleaseYear = 2010, Title = "Gambler" };
+            var mNode = Node&lt;Movie&gt;.Instance(movie);
+            var q = Query
+                .Match(mNode, pNode)
+                .Return&lt;Movie&gt;()
+                .OrderByDescending&lt;Movie, int&gt;(m =&gt; m.ReleaseYear);</code>
+            </example>
+            <seealso cref="M:CypherQueryBuilder.MatchQuery.OrderBy``2(System.Linq.Expressions.Expression{System.Func{``0,``1}},System.String)">OrderBy{T, K}(Expression{Func{T, K}}, string?)</seealso>
+        </member>
+        <member name="M:CypherQueryBuilder.Node.Instance``1(System.Int32)">
+            <summary>
+            Create a new Instance of <paramref name="node"/> type <typeparamref name="T"/> with alias suffixed with <paramref name="sequence"/>
+            </summary>
+            <param name="sequence"></param>
+            <returns>New <paramref name="node"/> of type T</returns>
+            <remarks><paramref name="sequence"/> will be default to zero if not provided</remarks>
+            <seealso cref="M:CypherQueryBuilder.Node.Instance``1(``0,System.Int32)"/>
+        </member>
+        <member name="M:CypherQueryBuilder.Node.Instance``1(``0,System.Int32)">
+            <summary>
+            Create a new Instance of <paramref name="node"/> type <typeparamref name="T"/> with alias suffixed with <paramref name="sequence"/>
+            </summary>
+            <param name="obj">The object.</param>
+            <param name="sequence"></param>
+            <returns>New <paramref name="node"/> of type T</returns>
+            <remarks><paramref name="sequence"/> will be default to zero if not provided</remarks>
+            <seealso cref="M:CypherQueryBuilder.Node.Instance``1(System.Int32)"/>
+        </member>
+        <member name="M:CypherQueryBuilder.Node.Compile(System.Collections.Generic.HashSet{System.String})">
+            <summary>
+            Compiles this instance Cipher queryable string format.
+            </summary>
+            <returns>ValueTuple of (string match, string where).</returns>
+        </member>
+        <member name="M:CypherQueryBuilder.Node.WithLabels(System.String[])">
+            <summary>
+            Applies the labels fo the node.
+            </summary>
+            <param name="labels">The labels.</param>
+            <returns></returns>
+        </member>
+        <member name="M:CypherQueryBuilder.Node.WithProperty(System.Object)">
+            <summary>
+            Configure the property.
+            </summary>
+            <param name="obj">The object.</param>
+            <returns>The same <paramref name="node"/></returns>
+            <seealso cref="M:CypherQueryBuilder.Node.WithProperty(System.String,System.Object)"/>
+        </member>
+        <member name="M:CypherQueryBuilder.Node.WithProperty(System.String,System.Object)">
+            <summary>
+            Configure the property.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="value">The value.</param>
+            <returns>The same <paramref name="node"/></returns>
+            <seealso cref="M:CypherQueryBuilder.Node.WithProperty(System.Object)"/>
+        </member>
+        <member name="M:CypherQueryBuilder.Node.WithRelation(CypherQueryBuilder.Node,System.String,System.Object,System.Boolean,System.String[])">
+            <summary>
+            Configure the relation with another node.
+            </summary>
+            <param name="to">To.</param>
+            <param name="relationAlias">The relation alias.</param>
+            <param name="relationProperties">The relation properties.</param>
+            <param name="isForward">if set to <c>true</c> [is forward].</param>
+            <param name="labels">The labels.</param>
+            <returns>The same <paramref name="node"/></returns>
+        </member>
+        <member name="M:CypherQueryBuilder.Node.WithRelation``1(CypherQueryBuilder.Node,``0,System.Int32,System.Boolean,System.String[])">
+            <summary>Withes the relation.</summary>
+            <typeparam name="R"></typeparam>
+            <param name="to">To.</param>
+            <param name="instance">The instance for the relation.</param>
+            <param name="aliasSequence">The alias sequence for the relation.</param>
+            <param name="isForward">if set to <c>true</c> [is forward].</param>
+            <param name="expr"></param>
+            <param name="labels">The labels.</param>
+            <returns>
+              <br />
+            </returns>
+            <example>
+              <code>var r = 2010;
+            var actor = new Person { FullName = "Debjit", Age = 80 };
+            var mNode = Node&lt;Movie&gt;.Instance().Where(p =&gt; p.ReleaseYear &gt; 500);
+            mNode.WithRelation(actor.AsNode(), new ActedIn() { ReleaseYear = 2009 });</code>
+            </example>
+        </member>
+        <member name="M:CypherQueryBuilder.Node`1.Instance(System.Int32)">
+            <summary>
+            Create a new Instance of <paramref name="node"/> type <typeparamref name="T"/> with alias suffixed with <paramref name="sequence"/>
+            </summary>
+            <param name="sequence"></param>
+            <returns>New <paramref name="node"/> of type T</returns>
+            <remarks><paramref name="sequence"/> will be default to zero if not provided</remarks>
+            <seealso cref="M:CypherQueryBuilder.Node`1.Instance(System.Int32)"/>
+            <seealso cref="M:CypherQueryBuilder.Node`1.Instance(CypherQueryBuilder.Node{`0}@,System.Int32)"/>
+        </member>
+        <member name="M:CypherQueryBuilder.Node`1.Instance(CypherQueryBuilder.Node{`0}@,System.Int32)">
+            <summary>Create a new Instance of <paramref name="node" /> type <span class="typeparameter">T</span> with alias suffixed with <paramref name="sequence" /></summary>
+            <param name="node">out parameter</param>
+            <param name="sequence"></param>
+            <returns>New <paramref name="node" /> of type T</returns>
+            <remarks>
+              <paramref name="sequence" /> will be default to zero if not provided</remarks>
+            <example>
+              <code>Node&lt;Domain&gt;.Instance(out var domainNode).Where(p =&gt; p.Uid == "TestDomain");
+            Node&lt;Group&gt;.Instance(out var groupNode).WithProperty(new { Uid = "gId_1", Name = "GName", Domain = "TestDomain" });
+            var q = Query.Match(domainNode)
+                .CreateRelation("hg", "HAS_DOMAIN", groupNode, domainNode, false, new { DomainId = "TestDomain", GroupId = "gId_1" });
+            var (cq, parameters) = q.CompileWithParemeters();
+            Console.WriteLine(cq);</code>
+            </example>
+            <seealso cref="M:CypherQueryBuilder.Node`1.Instance(System.Int32)" />
+            <seealso cref="M:CypherQueryBuilder.Node`1.Instance(`0,System.Int32)">Instance(T, int)</seealso>
+        </member>
+        <member name="M:CypherQueryBuilder.Node`1.Instance(`0,System.Int32)">
+            <summary>
+            Create a new Instance of <paramref name="node"/> type <typeparamref name="T"/> with alias suffixed with <paramref name="sequence"/>
+            </summary>
+            <param name="obj">The object.</param>
+            <param name="sequence">The sequence.</param>
+            <returns>New <paramref name="node"/> of type T</returns>
+            <remarks><paramref name="sequence"/> will be default to zero if not provided</remarks>
+            <seealso cref="M:CypherQueryBuilder.Node`1.Instance(System.Int32)"/>
+            <seealso cref="M:CypherQueryBuilder.Node`1.Instance(CypherQueryBuilder.Node{`0}@,System.Int32)"/>
+        </member>
+        <member name="M:CypherQueryBuilder.Node`1.Where(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Applies filter or Where clause.
+            </summary>
+            <param name="expr">The expr.</param>
+            <returns>The same <paramref name="node"/> of type T</returns>
+        </member>
+        <member name="M:CypherQueryBuilder.Node`1.WithProperty(System.Object)">
+            <summary>
+            Configure the property.
+            </summary>
+            <param name="obj">The object.</param>
+            <returns>The same <paramref name="node"/> of type T</returns>
+            <seealso cref="M:CypherQueryBuilder.Node`1.WithProperty(System.String,System.Object)"/>
+        </member>
+        <member name="M:CypherQueryBuilder.Node`1.WithProperty(`0)">
+            <summary>
+            Configure the property.
+            </summary>
+            <param name="obj">The object.</param>
+            <returns></returns>
+        </member>
+        <member name="M:CypherQueryBuilder.Node`1.WithProperty(System.String,System.Object)">
+            <summary>
+            Configure the property.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="value">The value.</param>
+            <returns>The same <paramref name="node"/> of type T</returns>
+            <seealso cref="M:CypherQueryBuilder.Node`1.WithProperty(System.Object)"/>
+        </member>
+        <member name="M:CypherQueryBuilder.NodeCreationQuery.Return(System.String[])">
+            <summary>
+            Returns the specified returns.
+            </summary>
+            <param name="returns">The returns.</param>
+            <returns></returns>
+        </member>
+        <member name="M:CypherQueryBuilder.NodeCreationQuery.Return``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Boolean)">
+            <summary>
+            Returns the specified f.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="f">The f.</param>
+            <param name="aliasToBeRemoved">if set to <c>true</c> [alias to be removed].</param>
+            <returns></returns>
+        </member>
+        <member name="M:CypherQueryBuilder.NodeCreationQuery.Return``1(CypherQueryBuilder.Node{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Boolean)">
+            <summary>
+            Returns the specified node.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="node">The node.</param>
+            <param name="f">The f.</param>
+            <param name="aliasToBeRemoved">if set to <c>true</c> [alias to be removed].</param>
+            <returns></returns>
+        </member>
+        <member name="M:CypherQueryBuilder.NodeCreationQuery.Compile">
+            <summary>
+            Compiles this instance to Cypher Query string.
+            </summary>
+            <returns cref="T:System.String">Cypher Query string</returns>
+        </member>
+        <member name="M:CypherQueryBuilder.NodeCreationQuery.Merge(CypherQueryBuilder.Node,CypherQueryBuilder.Node[])">
+            <summary>
+            Merges the specified node.
+            </summary>
+            <param name="node">The node.</param>
+            <param name="otherNodes">The other nodes.</param>
+            <returns></returns>
+        </member>
+        <member name="M:CypherQueryBuilder.NodeCreationQuery.ReleaseResources">
+            <summary>
+            Releases the resources.
+            </summary>
+        </member>
+        <member name="T:CypherQueryBuilder.Query">
+            <summary>
+            <c>Query</c> - The main entry point to build cypher query for create, merge or match
+            </summary>
+        </member>
+        <member name="M:CypherQueryBuilder.Query.Create(CypherQueryBuilder.Node,CypherQueryBuilder.Node[])">
+            <summary>Creates the specified node.</summary>
+            <param name="node">Node to Instance</param>
+            <param name="otherNodes">Other nodes to match in case multiple nodes to be created.</param>
+            <returns cref="T:CypherQueryBuilder.NodeCreationQuery">NodeCreationQuery</returns>
+            <example>
+            Example to build create query.
+            <code>var movie = new Movie() { ReleaseYear = 2010, Title = "Gambler" };
+            var q = Query.Instance(
+                Node&lt;Movie&gt;.Instance(movie)
+                    .WithRelation(Node&lt;Person&gt;.Instance(new Person {Age = 30, FullName = "Ray" }), "DIRECTED_BY"))
+                .Return&lt;Movie&gt;(p =&gt; new { p.Title, p.ReleaseYear }).Return&lt;Person&gt;(p =&gt; new { p.FullName});
+            var str = q.Compile();</code></example>
+        </member>
+        <member name="M:CypherQueryBuilder.Query.Match(CypherQueryBuilder.Node,CypherQueryBuilder.Node[])">
+            <summary>Matches the specified node.</summary>
+            <example>
+            <code>
+            var q = Query.Match(n).Return("n", "r", "m");
+            </code>
+            </example>
+            <param cref="T:CypherQueryBuilder.Node" name="node">Node to Match</param>
+            <param cref="T:CypherQueryBuilder.Node" name="otherNodes">Other nodes to match in case multiple nodes to be matched</param>
+            <returns cref="T:CypherQueryBuilder.MatchQuery"><c>MatchQuery</c></returns>
+        </member>
+        <member name="M:CypherQueryBuilder.Query.Merge(CypherQueryBuilder.Node,CypherQueryBuilder.Node[])">
+            <summary>
+            Merges the specified node.
+            </summary>
+            <param name="node">The node.</param>
+            <param name="otherNodes">The other nodes in case multiple nodes to be merged.</param>
+            <returns cref="T:CypherQueryBuilder.NodeCreationQuery">NodeCreationQuery</returns>
+            <example>
+            Example to build merge query.
+            <code>var movie = new Movie() { ReleaseYear = 2010, Title = "Gambler" };
+            var q = Query.Merge(
+                Node&lt;Movie&gt;.Instance(movie)
+                    .WithRelation(Node&lt;Person&gt;.Instance(new Person {Age = 30, FullName = "Ray" }), "DIRECTED_BY"))
+                .Return&lt;Movie&gt;(p =&gt; new { p.Title, p.ReleaseYear }).Return&lt;Person&gt;(p =&gt; new { p.FullName});
+            var str = q.Compile();</code></example>
+        </member>
+        <member name="M:CypherQueryBuilder.Query.Create(System.Boolean,CypherQueryBuilder.Node,CypherQueryBuilder.Node[])">
+            <summary>
+            Creates the specified to merge.
+            </summary>
+            <param name="toMerge">if set to <c>true</c> [to merge].</param>
+            <param name="node">The node.</param>
+            <param name="otherNodes">The other nodes.</param>
+            <returns cref="T:CypherQueryBuilder.NodeCreationQuery"></returns>
+        </member>
+        <member name="M:CypherQueryBuilder.QueryBase.Compile">
+            <summary>
+            Compiles this instance to Cypher Query string.
+            </summary>
+            <returns cref="T:System.String">Cypher Query string</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:CypherQueryBuilder.QueryBase.Return(System.String[])" -->
+        <member name="M:CypherQueryBuilder.QueryBase.Return``1(CypherQueryBuilder.Node{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Boolean)">
+            <summary>
+            Collect data to build return parts whilde compiling.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="node">The node.</param>
+            <param name="f">The f.</param>
+            <param name="aliasToBeRemoved">if set to <c>true</c> [alias to be removed].</param>
+            <returns></returns>
+            <seealso cref="M:CypherQueryBuilder.QueryBase.Return(System.String[])"/>
+            <seealso cref="M:CypherQueryBuilder.QueryBase.Return``1(System.String,System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Boolean)"/>
+        </member>
+        <member name="M:CypherQueryBuilder.QueryBase.Return``1(System.String,System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Boolean)">
+            <summary>
+            Collect data to build return parts whilde compiling.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="alias">The alias.</param>
+            <param name="f">The f.</param>
+            <param name="aliasToBeRemoved">if set to <c>true</c> [alias to be removed].</param>
+            <returns></returns>
+            <seealso cref="M:CypherQueryBuilder.QueryBase.Return(System.String[])"/>
+            <seealso cref="M:CypherQueryBuilder.QueryBase.Return``1(CypherQueryBuilder.Node{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Boolean)"/>
+        </member>
+        <member name="M:CypherQueryBuilder.QueryBase.AssignmentExp">
+            <remarks>
+            Pattern:<br/>
+            <code>(?&lt;K&gt;\\w+)\\s*\\=\\s*(?&lt;V&gt;\\w+(\\.\\w+)?)</code><br/>
+            Options:<br/>
+            <code>RegexOptions.IgnoreCase</code><br/>
+            Explanation:<br/>
+            <code>
+            ○ "K" capture group.<br/>
+                ○ Match a word character atomically at least once.<br/>
+            ○ Match a whitespace character atomically any number of times.<br/>
+            ○ Match '='.<br/>
+            ○ Match a whitespace character atomically any number of times.<br/>
+            ○ "V" capture group.<br/>
+                ○ Match a word character greedily at least once.<br/>
+                ○ Optional (greedy).<br/>
+                    ○ 1st capture group.<br/>
+                        ○ Match '.'.<br/>
+                        ○ Match a word character atomically at least once.<br/>
+            </code>
+            </remarks>
+        </member>
+        <member name="M:CypherQueryBuilder.Relation`1.Where(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Applies filter or Where clause.
+            </summary>
+            <param name="expr">The expr.</param>
+            <returns>The same <paramref name="Relation"/> of type T</returns>
+        </member>
+        <member name="M:CypherQueryBuilder.UnionQuery.CompileWithParemeters(System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>Compiles the instance to Cypher Query string with paremeters.</summary>
+            <returns cref="T:System.ValueTuple">ValueTuple&lt;string, Dictionary&lt;string, Nullable&lt;Object&gt;&gt;&gt;</returns>
+            <example>
+              <para>Usage:</para>
+              <code>var metaDataCount = 2;
+            var metaDataNodes = new Node&lt;MetaData&gt;[metaDataCount];
+            for (int i = 0; i &lt; metaDataCount; i++)
+            {
+                var id = $"mId_{i}";
+                metaDataNodes[i] = Node&lt;MetaData&gt;.Instance(i).Where(p =&gt; p.Uid == id);
+            }
+            var domainNode = Node&lt;Domain&gt;.Instance().Where(p =&gt; p.Uid == "TestDomain");
+            var (mq, parameters) = Query.Match(domainNode, metaDataNodes).CompileAsParemeterized();</code>
+            </example>
+            <seealso cref="M:CypherQueryBuilder.UnionQuery.Compile"/>
+        </member>
+        <member name="M:CypherQueryBuilder.UpdateQuery.Compile">
+            <summary>
+            Compiles this instance to Cypher Query string.
+            </summary>
+            <returns cref="T:System.String">Cypher Query string</returns>
+            <seealso cref="M:CypherQueryBuilder.UpdateQuery.CompileWithParemeters(System.Collections.Generic.Dictionary{System.String,System.Object})"/>
+        </member>
+        <member name="M:CypherQueryBuilder.UpdateQuery.CompileWithParemeters(System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>Compiles the instance to Cypher Query string with paremeters.</summary>
+            <returns cref="T:System.ValueTuple">ValueTuple&lt;string, Dictionary&lt;string, Nullable&lt;Object&gt;&gt;&gt;</returns>
+            <example>
+              <para>Usage:</para>
+              <code>var metaDataCount = 2;
+            var metaDataNodes = new Node&lt;MetaData&gt;[metaDataCount];
+            for (int i = 0; i &lt; metaDataCount; i++)
+            {
+                var id = $"mId_{i}";
+                metaDataNodes[i] = Node&lt;MetaData&gt;.Instance(i).Where(p =&gt; p.Uid == id);
+            }
+            var domainNode = Node&lt;Domain&gt;.Instance().Where(p =&gt; p.Uid == "TestDomain");
+            var (mq, parameters) = Query.Match(domainNode, metaDataNodes).CompileAsParemeterized();</code>
+            </example>
+            <seealso cref="M:CypherQueryBuilder.UpdateQuery.Compile"/>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.AssignmentExp_0">
+            <summary>Custom <see cref="T:System.Text.RegularExpressions.Regex"/>-derived type for the AssignmentExp method.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.AssignmentExp_0.Instance">
+            <summary>Cached, thread-safe singleton instance.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.AssignmentExp_0.#ctor">
+            <summary>Initializes the instance.</summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.AssignmentExp_0.RunnerFactory">
+            <summary>Provides a factory for creating <see cref="T:System.Text.RegularExpressions.RegexRunner"/> instances to be used by methods on <see cref="T:System.Text.RegularExpressions.Regex"/>.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.AssignmentExp_0.RunnerFactory.CreateInstance">
+            <summary>Creates an instance of a <see cref="T:System.Text.RegularExpressions.RegexRunner"/> used by methods on <see cref="T:System.Text.RegularExpressions.Regex"/>.</summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.AssignmentExp_0.RunnerFactory.Runner">
+            <summary>Provides the runner that contains the custom logic implementing the specified regular expression.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.AssignmentExp_0.RunnerFactory.Runner.Scan(System.ReadOnlySpan{System.Char})">
+            <summary>Scan the <paramref name="inputSpan"/> starting from base.runtextstart for the next match.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.AssignmentExp_0.RunnerFactory.Runner.TryFindNextPossibleStartingPosition(System.ReadOnlySpan{System.Char})">
+            <summary>Search <paramref name="inputSpan"/> starting from base.runtextpos for the next location a match could possibly start.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+            <returns>true if a possible match was found; false if no more matches are possible.</returns>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.AssignmentExp_0.RunnerFactory.Runner.TryMatchAtCurrentPosition(System.ReadOnlySpan{System.Char})">
+            <summary>Determine whether <paramref name="inputSpan"/> at base.runtextpos is a match for the regular expression.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+            <returns>true if the regular expression matches at the current position; otherwise, false.</returns>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.Utilities">
+            <summary>Helper methods used by generated <see cref="T:System.Text.RegularExpressions.Regex"/>-derived implementations.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.Utilities.s_defaultTimeout">
+            <summary>Default timeout value set in <see cref="T:System.AppContext"/>, or <see cref="F:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout"/> if none was set.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.Utilities.s_hasTimeout">
+            <summary>Whether <see cref="F:System.Text.RegularExpressions.Generated.Utilities.s_defaultTimeout"/> is non-infinite.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.Utilities.IndexOfAnyWordChar(System.ReadOnlySpan{System.Char})">
+            <summary>Finds the next index of any character that matches a word character.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.Utilities.IsWordChar(System.Char)">
+            <summary>Determines whether the character is part of the [\w] set.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.Utilities.StackPush(System.Int32[]@,System.Int32@,System.Int32,System.Int32)">
+            <summary>Pushes 2 values onto the backtracking stack.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.Utilities.s_asciiExceptWordChars">
+            <summary>Supports searching for characters in or not in "\0\u0001\u0002\u0003\u0004\u0005\u0006\a\b\t\n\v\f\r\u000e\u000f\u0010\u0011\u0012\u0013\u0014\u0015\u0016\u0017\u0018\u0019\u001a\u001b\u001c\u001d\u001e\u001f !\"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\\]^`{|}~\u007f".</summary>
+        </member>
+    </members>
+</doc>
