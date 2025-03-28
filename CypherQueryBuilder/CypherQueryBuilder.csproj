@@ -27,7 +27,7 @@
 		<PackageReference Include="ExpressionTreeToStringWithCypher" Version="1.1.2" />
 		<PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.13.0" />
 		<PackageReference Include="Microsoft.CodeAnalysis.CSharp.Scripting" Version="4.13.0" />
-		<PackageReference Include="Utility.Disposable" Version="1.1.1" />
+		<PackageReference Include="Utility.Disposable" Version="1.1.2" />
 		<None Include="Documents\index.md" Pack="true" PackagePath="\" />
 	</ItemGroup>
 </Project>
