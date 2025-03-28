@@ -4,7 +4,7 @@
 		<TargetFramework>net9.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
-		<Version>1.8.4</Version>
+		<Version>1.8.5</Version>
 		<LangVersion>latest</LangVersion>
 		<Authors>Tech J Mage</Authors>
 		<Description>Cypher, OGM, Query</Description>

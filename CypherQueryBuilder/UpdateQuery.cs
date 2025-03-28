@@ -59,12 +59,25 @@ public class UpdateQuery : MatchQuery
             alias = FindAlias<T>();
         var pMap = typeof(T).GetCypherPropertyMap(alias);
         var property = propertySelector.ToCypherString(pMap);
+        var tk = typeof(K);
+        if (tk.IsAssignableTo(typeof(System.Collections.IList)))// && tk.IsGenericType)
+        {
+            var fn = valueSelector.Compile();
+            var lst = (System.Collections.IList)fn(default);            
+            updatableValues.Add(property, lst);
+            return this;
+        }
+
         var exprValue = valueSelector.ToCypherString(pMap);
+        //TODO:
         try
         {
             var v = CSharpScript.EvaluateAsync(exprValue).Result;
             //if(typeof(K).IsValueType)
-            updatableValues.Add(property, (K)v);
+            if (v is char && typeof(K) == typeof(string))
+                updatableValues.Add(property, v.ToString());
+            else
+                updatableValues.Add(property, (K)v);
         }
         catch (CompilationErrorException)
         {
