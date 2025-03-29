@@ -299,8 +299,8 @@ public class QueryTests
         var q = Query
             .Match(book)
             .Where<Book>(p => p.PublishedOn > dt) // p.Topics.Contains("India") && 
-            //.Update<Book, DateTimeOffset>(p => p.PublishedOn, p => dt)
-            //.Update<Book, string>(p => p.Title, p => "N")
+            .Update<Book, DateTimeOffset>(p => p.PublishedOn, p => dt)
+            .Update<Book, string>(p => p.Title, p => "N")
             .Update<Book, List<string>>(p => p.Genre, p => new List<string>() { "History", "Culture", "Biology" });
         var str = q.Compile();
         (var str1, var p) = q.CompileWithParemeters();

@@ -1,6 +1,4 @@
 ﻿using ExpressionTreeToString;
-using Microsoft.CodeAnalysis.CSharp.Scripting;
-using Microsoft.CodeAnalysis.Scripting;
 using System.Linq.Expressions;
 using System.Text;
 
@@ -60,29 +58,9 @@ public class UpdateQuery : MatchQuery
         var pMap = typeof(T).GetCypherPropertyMap(alias);
         var property = propertySelector.ToCypherString(pMap);
         var tk = typeof(K);
-        if (tk.IsAssignableTo(typeof(System.Collections.IList)))// && tk.IsGenericType)
-        {
-            var fn = valueSelector.Compile();
-            var lst = (System.Collections.IList)fn(default);            
-            updatableValues.Add(property, lst);
-            return this;
-        }
-
-        var exprValue = valueSelector.ToCypherString(pMap);
-        //TODO:
-        try
-        {
-            var v = CSharpScript.EvaluateAsync(exprValue).Result;
-            //if(typeof(K).IsValueType)
-            if (v is char && typeof(K) == typeof(string))
-                updatableValues.Add(property, v.ToString());
-            else
-                updatableValues.Add(property, (K)v);
-        }
-        catch (CompilationErrorException)
-        {
-            updateExpressions.Add(property, exprValue);
-        }
+        var fn = valueSelector.Compile();
+        var v = fn(default);
+        updatableValues.Add(property, v);
         return this;
     }
     protected void BuildUpdatePart(StringBuilder sb, Dictionary<string, object?>? parameters = null)
