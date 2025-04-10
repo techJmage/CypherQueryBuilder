@@ -19,7 +19,6 @@
 	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="Currying" Version="1.0.4" />
-		<PackageReference Include="Neo4j.Driver" Version="5.27.0" />
 		<PackageReference Include="DefaultDocumentation" Version="0.8.2">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -27,6 +26,7 @@
 		<PackageReference Include="ExpressionTreeToStringWithCypher" Version="1.1.2" />
 		<PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.13.0" />
 		<PackageReference Include="Microsoft.CodeAnalysis.CSharp.Scripting" Version="4.13.0" />
+		<PackageReference Include="Neo4j.Driver.Concurrent" Version="1.0.0" />
 		<PackageReference Include="Utility.Disposable" Version="1.1.2" />
 		<None Include="Documents\index.md" Pack="true" PackagePath="\" />
 	</ItemGroup>
