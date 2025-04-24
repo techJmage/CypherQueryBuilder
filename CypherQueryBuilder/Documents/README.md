@@ -1,4 +1,4 @@
-#### [CypherQueryBuilder](index.md 'index')
+#### [CypherQueryBuilder](README.md 'README')
 
 ## CypherQueryBuilder Assembly
 ### Namespaces
@@ -16,7 +16,7 @@
 public class CreateQuery : CypherQueryBuilder.MatchQuery
 ```
 
-Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; [Utility.Disposable](https://docs.microsoft.com/en-us/dotnet/api/Utility.Disposable 'Utility.Disposable') &#129106; [QueryBase](index.md#CypherQueryBuilder.QueryBase 'CypherQueryBuilder.QueryBase') &#129106; [MatchQuery](index.md#CypherQueryBuilder.MatchQuery 'CypherQueryBuilder.MatchQuery') &#129106; CreateQuery
+Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; [Utility.Disposable](https://docs.microsoft.com/en-us/dotnet/api/Utility.Disposable 'Utility.Disposable') &#129106; [QueryBase](README.md#CypherQueryBuilder.QueryBase 'CypherQueryBuilder.QueryBase') &#129106; [MatchQuery](README.md#CypherQueryBuilder.MatchQuery 'CypherQueryBuilder.MatchQuery') &#129106; CreateQuery
 ### Methods
 
 <a name='CypherQueryBuilder.CreateQuery.Compile()'></a>
@@ -34,7 +34,7 @@ public override string Compile();
 Cypher Query string
 
 ### See Also
-- [CompileWithParemeters(Dictionary&lt;string,object&gt;)](index.md#CypherQueryBuilder.CreateQuery.CompileWithParemeters(System.Collections.Generic.Dictionary_string,object_) 'CypherQueryBuilder.CreateQuery.CompileWithParemeters(System.Collections.Generic.Dictionary<string,object>)')
+- [CompileWithParemeters(Dictionary&lt;string,object&gt;)](README.md#CypherQueryBuilder.CreateQuery.CompileWithParemeters(System.Collections.Generic.Dictionary_string,object_) 'CypherQueryBuilder.CreateQuery.CompileWithParemeters(System.Collections.Generic.Dictionary<string,object>)')
 
 <a name='CypherQueryBuilder.CreateQuery.CompileWithParemeters(System.Collections.Generic.Dictionary_string,object_)'></a>
 
@@ -72,7 +72,7 @@ var metaDataCount = 2;
 ```
 
 ### See Also
-- [Compile()](index.md#CypherQueryBuilder.CreateQuery.Compile() 'CypherQueryBuilder.CreateQuery.Compile()')
+- [Compile()](README.md#CypherQueryBuilder.CreateQuery.Compile() 'CypherQueryBuilder.CreateQuery.Compile()')
 
 <a name='CypherQueryBuilder.CreateQuery.CreateRelation(string,string,CypherQueryBuilder.Node,CypherQueryBuilder.Node,bool,object)'></a>
 
@@ -99,13 +99,13 @@ The label.
 
 <a name='CypherQueryBuilder.CreateQuery.CreateRelation(string,string,CypherQueryBuilder.Node,CypherQueryBuilder.Node,bool,object).from'></a>
 
-`from` [Node](index.md#CypherQueryBuilder.Node 'CypherQueryBuilder.Node')
+`from` [Node](README.md#CypherQueryBuilder.Node 'CypherQueryBuilder.Node')
 
 From.
 
 <a name='CypherQueryBuilder.CreateQuery.CreateRelation(string,string,CypherQueryBuilder.Node,CypherQueryBuilder.Node,bool,object).to'></a>
 
-`to` [Node](index.md#CypherQueryBuilder.Node 'CypherQueryBuilder.Node')
+`to` [Node](README.md#CypherQueryBuilder.Node 'CypherQueryBuilder.Node')
 
 To.
 
@@ -122,7 +122,7 @@ if set to `true` [to merge].
 The properties.
 
 #### Returns
-[CreateQuery](index.md#CypherQueryBuilder.CreateQuery 'CypherQueryBuilder.CreateQuery')
+[CreateQuery](README.md#CypherQueryBuilder.CreateQuery 'CypherQueryBuilder.CreateQuery')
 
 <a name='CypherQueryBuilder.DeleteQuery'></a>
 
@@ -132,7 +132,7 @@ The properties.
 public class DeleteQuery : CypherQueryBuilder.MatchQuery
 ```
 
-Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; [Utility.Disposable](https://docs.microsoft.com/en-us/dotnet/api/Utility.Disposable 'Utility.Disposable') &#129106; [QueryBase](index.md#CypherQueryBuilder.QueryBase 'CypherQueryBuilder.QueryBase') &#129106; [MatchQuery](index.md#CypherQueryBuilder.MatchQuery 'CypherQueryBuilder.MatchQuery') &#129106; DeleteQuery
+Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; [Utility.Disposable](https://docs.microsoft.com/en-us/dotnet/api/Utility.Disposable 'Utility.Disposable') &#129106; [QueryBase](README.md#CypherQueryBuilder.QueryBase 'CypherQueryBuilder.QueryBase') &#129106; [MatchQuery](README.md#CypherQueryBuilder.MatchQuery 'CypherQueryBuilder.MatchQuery') &#129106; DeleteQuery
 ### Methods
 
 <a name='CypherQueryBuilder.DeleteQuery.Compile()'></a>
@@ -168,12 +168,12 @@ public override CypherQueryBuilder.DeleteQuery Delete<T>(params T[] entities)
 
 <a name='CypherQueryBuilder.DeleteQuery.Delete_T_(T[]).entities'></a>
 
-`entities` [T](index.md#CypherQueryBuilder.DeleteQuery.Delete_T_(T[]).T 'CypherQueryBuilder.DeleteQuery.Delete<T>(T[]).T')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
+`entities` [T](README.md#CypherQueryBuilder.DeleteQuery.Delete_T_(T[]).T 'CypherQueryBuilder.DeleteQuery.Delete<T>(T[]).T')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
 
 The entities to delete.
 
 #### Returns
-[DeleteQuery](index.md#CypherQueryBuilder.DeleteQuery 'CypherQueryBuilder.DeleteQuery')  
+[DeleteQuery](README.md#CypherQueryBuilder.DeleteQuery 'CypherQueryBuilder.DeleteQuery')  
 DeleteQuery
 
 <a name='CypherQueryBuilder.DeleteQuery.Detach_T_(T[])'></a>
@@ -195,12 +195,12 @@ public override CypherQueryBuilder.DeleteQuery Detach<T>(params T[] entities)
 
 <a name='CypherQueryBuilder.DeleteQuery.Detach_T_(T[]).entities'></a>
 
-`entities` [T](index.md#CypherQueryBuilder.DeleteQuery.Detach_T_(T[]).T 'CypherQueryBuilder.DeleteQuery.Detach<T>(T[]).T')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
+`entities` [T](README.md#CypherQueryBuilder.DeleteQuery.Detach_T_(T[]).T 'CypherQueryBuilder.DeleteQuery.Detach<T>(T[]).T')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
 
 The entities to detache and delete.
 
 #### Returns
-[DeleteQuery](index.md#CypherQueryBuilder.DeleteQuery 'CypherQueryBuilder.DeleteQuery')  
+[DeleteQuery](README.md#CypherQueryBuilder.DeleteQuery 'CypherQueryBuilder.DeleteQuery')  
 DeleteQuery
 
 <a name='CypherQueryBuilder.DeleteQuery.ReleaseResources()'></a>
@@ -225,7 +225,7 @@ CypherQueryBuilder.IEntity
 Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; Entity
 
 Derived  
-&#8627; [Node](index.md#CypherQueryBuilder.Node 'CypherQueryBuilder.Node')
+&#8627; [Node](README.md#CypherQueryBuilder.Node 'CypherQueryBuilder.Node')
 
 Implements [CypherQueryBuilder.IEntity](https://docs.microsoft.com/en-us/dotnet/api/CypherQueryBuilder.IEntity 'CypherQueryBuilder.IEntity')
 ### Methods
@@ -272,12 +272,12 @@ public virtual CypherQueryBuilder.Entity TranslateProperties<T>(T obj);
 
 <a name='CypherQueryBuilder.Entity.TranslateProperties_T_(T).obj'></a>
 
-`obj` [T](index.md#CypherQueryBuilder.Entity.TranslateProperties_T_(T).T 'CypherQueryBuilder.Entity.TranslateProperties<T>(T).T')
+`obj` [T](README.md#CypherQueryBuilder.Entity.TranslateProperties_T_(T).T 'CypherQueryBuilder.Entity.TranslateProperties<T>(T).T')
 
 The object.
 
 #### Returns
-[Entity](index.md#CypherQueryBuilder.Entity 'CypherQueryBuilder.Entity')
+[Entity](README.md#CypherQueryBuilder.Entity 'CypherQueryBuilder.Entity')
 
 <a name='CypherQueryBuilder.MatchQuery'></a>
 
@@ -287,13 +287,13 @@ The object.
 public class MatchQuery : CypherQueryBuilder.QueryBase
 ```
 
-Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; [Utility.Disposable](https://docs.microsoft.com/en-us/dotnet/api/Utility.Disposable 'Utility.Disposable') &#129106; [QueryBase](index.md#CypherQueryBuilder.QueryBase 'CypherQueryBuilder.QueryBase') &#129106; MatchQuery
+Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; [Utility.Disposable](https://docs.microsoft.com/en-us/dotnet/api/Utility.Disposable 'Utility.Disposable') &#129106; [QueryBase](README.md#CypherQueryBuilder.QueryBase 'CypherQueryBuilder.QueryBase') &#129106; MatchQuery
 
 Derived  
-&#8627; [CreateQuery](index.md#CypherQueryBuilder.CreateQuery 'CypherQueryBuilder.CreateQuery')  
-&#8627; [DeleteQuery](index.md#CypherQueryBuilder.DeleteQuery 'CypherQueryBuilder.DeleteQuery')  
-&#8627; [UnionQuery](index.md#CypherQueryBuilder.UnionQuery 'CypherQueryBuilder.UnionQuery')  
-&#8627; [UpdateQuery](index.md#CypherQueryBuilder.UpdateQuery 'CypherQueryBuilder.UpdateQuery')
+&#8627; [CreateQuery](README.md#CypherQueryBuilder.CreateQuery 'CypherQueryBuilder.CreateQuery')  
+&#8627; [DeleteQuery](README.md#CypherQueryBuilder.DeleteQuery 'CypherQueryBuilder.DeleteQuery')  
+&#8627; [UnionQuery](README.md#CypherQueryBuilder.UnionQuery 'CypherQueryBuilder.UnionQuery')  
+&#8627; [UpdateQuery](README.md#CypherQueryBuilder.UpdateQuery 'CypherQueryBuilder.UpdateQuery')
 ### Methods
 
 <a name='CypherQueryBuilder.MatchQuery.BuildMatchPart(System.Text.StringBuilder)'></a>
@@ -328,7 +328,7 @@ public override string Compile();
 Cypher Query string
 
 ### See Also
-- [CompileWithParemeters(Dictionary&lt;string,object&gt;)](index.md#CypherQueryBuilder.MatchQuery.CompileWithParemeters(System.Collections.Generic.Dictionary_string,object_) 'CypherQueryBuilder.MatchQuery.CompileWithParemeters(System.Collections.Generic.Dictionary<string,object>)')
+- [CompileWithParemeters(Dictionary&lt;string,object&gt;)](README.md#CypherQueryBuilder.MatchQuery.CompileWithParemeters(System.Collections.Generic.Dictionary_string,object_) 'CypherQueryBuilder.MatchQuery.CompileWithParemeters(System.Collections.Generic.Dictionary<string,object>)')
 
 <a name='CypherQueryBuilder.MatchQuery.CompileWithParemeters(System.Collections.Generic.Dictionary_string,object_)'></a>
 
@@ -366,7 +366,7 @@ var metaDataCount = 2;
 ```
 
 ### See Also
-- [Compile()](index.md#CypherQueryBuilder.MatchQuery.Compile() 'CypherQueryBuilder.MatchQuery.Compile()')
+- [Compile()](README.md#CypherQueryBuilder.MatchQuery.Compile() 'CypherQueryBuilder.MatchQuery.Compile()')
 
 <a name='CypherQueryBuilder.MatchQuery.CreateRelation(string,string,CypherQueryBuilder.Node,CypherQueryBuilder.Node,bool,object)'></a>
 
@@ -393,13 +393,13 @@ The label.
 
 <a name='CypherQueryBuilder.MatchQuery.CreateRelation(string,string,CypherQueryBuilder.Node,CypherQueryBuilder.Node,bool,object).from'></a>
 
-`from` [Node](index.md#CypherQueryBuilder.Node 'CypherQueryBuilder.Node')
+`from` [Node](README.md#CypherQueryBuilder.Node 'CypherQueryBuilder.Node')
 
 From.
 
 <a name='CypherQueryBuilder.MatchQuery.CreateRelation(string,string,CypherQueryBuilder.Node,CypherQueryBuilder.Node,bool,object).to'></a>
 
-`to` [Node](index.md#CypherQueryBuilder.Node 'CypherQueryBuilder.Node')
+`to` [Node](README.md#CypherQueryBuilder.Node 'CypherQueryBuilder.Node')
 
 To.
 
@@ -416,7 +416,7 @@ if set to `true` [to merge].
 The properties.
 
 #### Returns
-[CreateQuery](index.md#CypherQueryBuilder.CreateQuery 'CypherQueryBuilder.CreateQuery')
+[CreateQuery](README.md#CypherQueryBuilder.CreateQuery 'CypherQueryBuilder.CreateQuery')
 
 <a name='CypherQueryBuilder.MatchQuery.Delete_T_(T[])'></a>
 
@@ -437,12 +437,12 @@ public virtual CypherQueryBuilder.DeleteQuery Delete<T>(params T[] entities)
 
 <a name='CypherQueryBuilder.MatchQuery.Delete_T_(T[]).entities'></a>
 
-`entities` [T](index.md#CypherQueryBuilder.MatchQuery.Delete_T_(T[]).T 'CypherQueryBuilder.MatchQuery.Delete<T>(T[]).T')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
+`entities` [T](README.md#CypherQueryBuilder.MatchQuery.Delete_T_(T[]).T 'CypherQueryBuilder.MatchQuery.Delete<T>(T[]).T')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
 
 The entities.
 
 #### Returns
-[DeleteQuery](index.md#CypherQueryBuilder.DeleteQuery 'CypherQueryBuilder.DeleteQuery')
+[DeleteQuery](README.md#CypherQueryBuilder.DeleteQuery 'CypherQueryBuilder.DeleteQuery')
 
 <a name='CypherQueryBuilder.MatchQuery.Detach_T_(T[])'></a>
 
@@ -463,12 +463,12 @@ public virtual CypherQueryBuilder.DeleteQuery Detach<T>(params T[] entities)
 
 <a name='CypherQueryBuilder.MatchQuery.Detach_T_(T[]).entities'></a>
 
-`entities` [T](index.md#CypherQueryBuilder.MatchQuery.Detach_T_(T[]).T 'CypherQueryBuilder.MatchQuery.Detach<T>(T[]).T')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
+`entities` [T](README.md#CypherQueryBuilder.MatchQuery.Detach_T_(T[]).T 'CypherQueryBuilder.MatchQuery.Detach<T>(T[]).T')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
 
 The entities.
 
 #### Returns
-[DeleteQuery](index.md#CypherQueryBuilder.DeleteQuery 'CypherQueryBuilder.DeleteQuery')
+[DeleteQuery](README.md#CypherQueryBuilder.DeleteQuery 'CypherQueryBuilder.DeleteQuery')
 
 <a name='CypherQueryBuilder.MatchQuery.Limit(int)'></a>
 
@@ -488,7 +488,7 @@ public CypherQueryBuilder.MatchQuery Limit(int limit);
 The limit.
 
 #### Returns
-[MatchQuery](index.md#CypherQueryBuilder.MatchQuery 'CypherQueryBuilder.MatchQuery')  
+[MatchQuery](README.md#CypherQueryBuilder.MatchQuery 'CypherQueryBuilder.MatchQuery')  
 MatchQuery
 
 <a name='CypherQueryBuilder.MatchQuery.OrderBy_T,K_(System.Linq.Expressions.Expression_System.Func_T,K__,string)'></a>
@@ -517,7 +517,7 @@ The property of the T type Node or Relation on which order by will be applied.
 
 <a name='CypherQueryBuilder.MatchQuery.OrderBy_T,K_(System.Linq.Expressions.Expression_System.Func_T,K__,string).keySelector'></a>
 
-`keySelector` [System.Linq.Expressions.Expression&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')[System.Func&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[T](index.md#CypherQueryBuilder.MatchQuery.OrderBy_T,K_(System.Linq.Expressions.Expression_System.Func_T,K__,string).T 'CypherQueryBuilder.MatchQuery.OrderBy<T,K>(System.Linq.Expressions.Expression<System.Func<T,K>>, string).T')[,](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[K](index.md#CypherQueryBuilder.MatchQuery.OrderBy_T,K_(System.Linq.Expressions.Expression_System.Func_T,K__,string).K 'CypherQueryBuilder.MatchQuery.OrderBy<T,K>(System.Linq.Expressions.Expression<System.Func<T,K>>, string).K')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')
+`keySelector` [System.Linq.Expressions.Expression&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')[System.Func&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[T](README.md#CypherQueryBuilder.MatchQuery.OrderBy_T,K_(System.Linq.Expressions.Expression_System.Func_T,K__,string).T 'CypherQueryBuilder.MatchQuery.OrderBy<T,K>(System.Linq.Expressions.Expression<System.Func<T,K>>, string).T')[,](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[K](README.md#CypherQueryBuilder.MatchQuery.OrderBy_T,K_(System.Linq.Expressions.Expression_System.Func_T,K__,string).K 'CypherQueryBuilder.MatchQuery.OrderBy<T,K>(System.Linq.Expressions.Expression<System.Func<T,K>>, string).K')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')
 
 The key selector.
 
@@ -528,7 +528,7 @@ The key selector.
 The alias.
 
 #### Returns
-[MatchQuery](index.md#CypherQueryBuilder.MatchQuery 'CypherQueryBuilder.MatchQuery')  
+[MatchQuery](README.md#CypherQueryBuilder.MatchQuery 'CypherQueryBuilder.MatchQuery')  
 MatchQuery
 
 ### Example
@@ -543,7 +543,7 @@ var movie = new Movie() { ReleaseYear = 2010, Title = "Gambler" };
 ```
 
 ### See Also
-- [OrderByDescending{T, K}(Expression{Func{T, K}}, string?)](index.md#CypherQueryBuilder.MatchQuery.OrderByDescending_T,K_(System.Linq.Expressions.Expression_System.Func_T,K__,string) 'CypherQueryBuilder.MatchQuery.OrderByDescending<T,K>(System.Linq.Expressions.Expression<System.Func<T,K>>, string)')
+- [OrderByDescending{T, K}(Expression{Func{T, K}}, string?)](README.md#CypherQueryBuilder.MatchQuery.OrderByDescending_T,K_(System.Linq.Expressions.Expression_System.Func_T,K__,string) 'CypherQueryBuilder.MatchQuery.OrderByDescending<T,K>(System.Linq.Expressions.Expression<System.Func<T,K>>, string)')
 
 <a name='CypherQueryBuilder.MatchQuery.OrderByDescending_T,K_(System.Linq.Expressions.Expression_System.Func_T,K__,string)'></a>
 
@@ -571,7 +571,7 @@ The property of the T type Node or Relation on which descending order by will be
 
 <a name='CypherQueryBuilder.MatchQuery.OrderByDescending_T,K_(System.Linq.Expressions.Expression_System.Func_T,K__,string).keySelector'></a>
 
-`keySelector` [System.Linq.Expressions.Expression&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')[System.Func&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[T](index.md#CypherQueryBuilder.MatchQuery.OrderByDescending_T,K_(System.Linq.Expressions.Expression_System.Func_T,K__,string).T 'CypherQueryBuilder.MatchQuery.OrderByDescending<T,K>(System.Linq.Expressions.Expression<System.Func<T,K>>, string).T')[,](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[K](index.md#CypherQueryBuilder.MatchQuery.OrderByDescending_T,K_(System.Linq.Expressions.Expression_System.Func_T,K__,string).K 'CypherQueryBuilder.MatchQuery.OrderByDescending<T,K>(System.Linq.Expressions.Expression<System.Func<T,K>>, string).K')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')
+`keySelector` [System.Linq.Expressions.Expression&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')[System.Func&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[T](README.md#CypherQueryBuilder.MatchQuery.OrderByDescending_T,K_(System.Linq.Expressions.Expression_System.Func_T,K__,string).T 'CypherQueryBuilder.MatchQuery.OrderByDescending<T,K>(System.Linq.Expressions.Expression<System.Func<T,K>>, string).T')[,](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[K](README.md#CypherQueryBuilder.MatchQuery.OrderByDescending_T,K_(System.Linq.Expressions.Expression_System.Func_T,K__,string).K 'CypherQueryBuilder.MatchQuery.OrderByDescending<T,K>(System.Linq.Expressions.Expression<System.Func<T,K>>, string).K')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')
 
 The key selector.
 
@@ -582,7 +582,7 @@ The key selector.
 The alias.
 
 #### Returns
-[MatchQuery](index.md#CypherQueryBuilder.MatchQuery 'CypherQueryBuilder.MatchQuery')  
+[MatchQuery](README.md#CypherQueryBuilder.MatchQuery 'CypherQueryBuilder.MatchQuery')  
 MatchQuery
 
 ### Example
@@ -597,7 +597,7 @@ var movie = new Movie() { ReleaseYear = 2010, Title = "Gambler" };
 ```
 
 ### See Also
-- [OrderBy{T, K}(Expression{Func{T, K}}, string?)](index.md#CypherQueryBuilder.MatchQuery.OrderBy_T,K_(System.Linq.Expressions.Expression_System.Func_T,K__,string) 'CypherQueryBuilder.MatchQuery.OrderBy<T,K>(System.Linq.Expressions.Expression<System.Func<T,K>>, string)')
+- [OrderBy{T, K}(Expression{Func{T, K}}, string?)](README.md#CypherQueryBuilder.MatchQuery.OrderBy_T,K_(System.Linq.Expressions.Expression_System.Func_T,K__,string) 'CypherQueryBuilder.MatchQuery.OrderBy<T,K>(System.Linq.Expressions.Expression<System.Func<T,K>>, string)')
 
 <a name='CypherQueryBuilder.MatchQuery.OrWhere(string)'></a>
 
@@ -617,7 +617,7 @@ public CypherQueryBuilder.MatchQuery OrWhere(string clause);
 The clause.
 
 #### Returns
-[MatchQuery](index.md#CypherQueryBuilder.MatchQuery 'CypherQueryBuilder.MatchQuery')
+[MatchQuery](README.md#CypherQueryBuilder.MatchQuery 'CypherQueryBuilder.MatchQuery')
 
 <a name='CypherQueryBuilder.MatchQuery.Return(string[])'></a>
 
@@ -637,7 +637,7 @@ public virtual CypherQueryBuilder.MatchQuery Return(params string[] returns);
 The returns.
 
 #### Returns
-[MatchQuery](index.md#CypherQueryBuilder.MatchQuery 'CypherQueryBuilder.MatchQuery')
+[MatchQuery](README.md#CypherQueryBuilder.MatchQuery 'CypherQueryBuilder.MatchQuery')
 
 <a name='CypherQueryBuilder.MatchQuery.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool)'></a>
 
@@ -657,13 +657,13 @@ public virtual CypherQueryBuilder.MatchQuery Return<T>(CypherQueryBuilder.Node<T
 
 <a name='CypherQueryBuilder.MatchQuery.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool).node'></a>
 
-`node` [CypherQueryBuilder.Node&lt;](index.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')[T](index.md#CypherQueryBuilder.MatchQuery.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool).T 'CypherQueryBuilder.MatchQuery.Return<T>(CypherQueryBuilder.Node<T>, System.Linq.Expressions.Expression<System.Func<T,object>>, bool).T')[&gt;](index.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')
+`node` [CypherQueryBuilder.Node&lt;](README.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')[T](README.md#CypherQueryBuilder.MatchQuery.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool).T 'CypherQueryBuilder.MatchQuery.Return<T>(CypherQueryBuilder.Node<T>, System.Linq.Expressions.Expression<System.Func<T,object>>, bool).T')[&gt;](README.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')
 
 The node.
 
 <a name='CypherQueryBuilder.MatchQuery.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool).f'></a>
 
-`f` [System.Linq.Expressions.Expression&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')[System.Func&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[T](index.md#CypherQueryBuilder.MatchQuery.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool).T 'CypherQueryBuilder.MatchQuery.Return<T>(CypherQueryBuilder.Node<T>, System.Linq.Expressions.Expression<System.Func<T,object>>, bool).T')[,](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')
+`f` [System.Linq.Expressions.Expression&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')[System.Func&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[T](README.md#CypherQueryBuilder.MatchQuery.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool).T 'CypherQueryBuilder.MatchQuery.Return<T>(CypherQueryBuilder.Node<T>, System.Linq.Expressions.Expression<System.Func<T,object>>, bool).T')[,](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')
 
 The f.
 
@@ -674,7 +674,7 @@ The f.
 if set to `true` [alias to be removed].
 
 #### Returns
-[MatchQuery](index.md#CypherQueryBuilder.MatchQuery 'CypherQueryBuilder.MatchQuery')
+[MatchQuery](README.md#CypherQueryBuilder.MatchQuery 'CypherQueryBuilder.MatchQuery')
 
 <a name='CypherQueryBuilder.MatchQuery.Return_T_(string,System.Linq.Expressions.Expression_System.Func_T,object__,bool)'></a>
 
@@ -700,7 +700,7 @@ The alias.
 
 <a name='CypherQueryBuilder.MatchQuery.Return_T_(string,System.Linq.Expressions.Expression_System.Func_T,object__,bool).f'></a>
 
-`f` [System.Linq.Expressions.Expression&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')[System.Func&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[T](index.md#CypherQueryBuilder.MatchQuery.Return_T_(string,System.Linq.Expressions.Expression_System.Func_T,object__,bool).T 'CypherQueryBuilder.MatchQuery.Return<T>(string, System.Linq.Expressions.Expression<System.Func<T,object>>, bool).T')[,](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')
+`f` [System.Linq.Expressions.Expression&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')[System.Func&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[T](README.md#CypherQueryBuilder.MatchQuery.Return_T_(string,System.Linq.Expressions.Expression_System.Func_T,object__,bool).T 'CypherQueryBuilder.MatchQuery.Return<T>(string, System.Linq.Expressions.Expression<System.Func<T,object>>, bool).T')[,](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')
 
 The f.
 
@@ -709,7 +709,7 @@ The f.
 `aliasToBeRemoved` [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
 
 #### Returns
-[MatchQuery](index.md#CypherQueryBuilder.MatchQuery 'CypherQueryBuilder.MatchQuery')
+[MatchQuery](README.md#CypherQueryBuilder.MatchQuery 'CypherQueryBuilder.MatchQuery')
 
 <a name='CypherQueryBuilder.MatchQuery.Return_T_(System.Linq.Expressions.Expression_System.Func_T,object__,bool)'></a>
 
@@ -729,7 +729,7 @@ public CypherQueryBuilder.MatchQuery Return<T>(System.Linq.Expressions.Expressio
 
 <a name='CypherQueryBuilder.MatchQuery.Return_T_(System.Linq.Expressions.Expression_System.Func_T,object__,bool).f'></a>
 
-`f` [System.Linq.Expressions.Expression&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')[System.Func&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[T](index.md#CypherQueryBuilder.MatchQuery.Return_T_(System.Linq.Expressions.Expression_System.Func_T,object__,bool).T 'CypherQueryBuilder.MatchQuery.Return<T>(System.Linq.Expressions.Expression<System.Func<T,object>>, bool).T')[,](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')
+`f` [System.Linq.Expressions.Expression&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')[System.Func&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[T](README.md#CypherQueryBuilder.MatchQuery.Return_T_(System.Linq.Expressions.Expression_System.Func_T,object__,bool).T 'CypherQueryBuilder.MatchQuery.Return<T>(System.Linq.Expressions.Expression<System.Func<T,object>>, bool).T')[,](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')
 
 The f.
 
@@ -740,7 +740,7 @@ The f.
 if set to `true` [alias to be removed].
 
 #### Returns
-[MatchQuery](index.md#CypherQueryBuilder.MatchQuery 'CypherQueryBuilder.MatchQuery')
+[MatchQuery](README.md#CypherQueryBuilder.MatchQuery 'CypherQueryBuilder.MatchQuery')
 
 <a name='CypherQueryBuilder.MatchQuery.Skip(int)'></a>
 
@@ -760,7 +760,7 @@ public CypherQueryBuilder.MatchQuery Skip(int skip);
 The skip.
 
 #### Returns
-[MatchQuery](index.md#CypherQueryBuilder.MatchQuery 'CypherQueryBuilder.MatchQuery')
+[MatchQuery](README.md#CypherQueryBuilder.MatchQuery 'CypherQueryBuilder.MatchQuery')
 
 <a name='CypherQueryBuilder.MatchQuery.Union(CypherQueryBuilder.MatchQuery)'></a>
 
@@ -775,12 +775,12 @@ public CypherQueryBuilder.UnionQuery Union(CypherQueryBuilder.MatchQuery other);
 
 <a name='CypherQueryBuilder.MatchQuery.Union(CypherQueryBuilder.MatchQuery).other'></a>
 
-`other` [MatchQuery](index.md#CypherQueryBuilder.MatchQuery 'CypherQueryBuilder.MatchQuery')
+`other` [MatchQuery](README.md#CypherQueryBuilder.MatchQuery 'CypherQueryBuilder.MatchQuery')
 
 The other.
 
 #### Returns
-[UnionQuery](index.md#CypherQueryBuilder.UnionQuery 'CypherQueryBuilder.UnionQuery')
+[UnionQuery](README.md#CypherQueryBuilder.UnionQuery 'CypherQueryBuilder.UnionQuery')
 
 <a name='CypherQueryBuilder.MatchQuery.Update_T,K_(System.Linq.Expressions.Expression_System.Func_T,K__,System.Linq.Expressions.Expression_System.Func_T,K__,string)'></a>
 
@@ -804,18 +804,18 @@ public virtual CypherQueryBuilder.UpdateQuery Update<T,K>(System.Linq.Expression
 
 <a name='CypherQueryBuilder.MatchQuery.Update_T,K_(System.Linq.Expressions.Expression_System.Func_T,K__,System.Linq.Expressions.Expression_System.Func_T,K__,string).propertySelector'></a>
 
-`propertySelector` [System.Linq.Expressions.Expression&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')[System.Func&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[T](index.md#CypherQueryBuilder.MatchQuery.Update_T,K_(System.Linq.Expressions.Expression_System.Func_T,K__,System.Linq.Expressions.Expression_System.Func_T,K__,string).T 'CypherQueryBuilder.MatchQuery.Update<T,K>(System.Linq.Expressions.Expression<System.Func<T,K>>, System.Linq.Expressions.Expression<System.Func<T,K>>, string).T')[,](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[K](index.md#CypherQueryBuilder.MatchQuery.Update_T,K_(System.Linq.Expressions.Expression_System.Func_T,K__,System.Linq.Expressions.Expression_System.Func_T,K__,string).K 'CypherQueryBuilder.MatchQuery.Update<T,K>(System.Linq.Expressions.Expression<System.Func<T,K>>, System.Linq.Expressions.Expression<System.Func<T,K>>, string).K')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')
+`propertySelector` [System.Linq.Expressions.Expression&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')[System.Func&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[T](README.md#CypherQueryBuilder.MatchQuery.Update_T,K_(System.Linq.Expressions.Expression_System.Func_T,K__,System.Linq.Expressions.Expression_System.Func_T,K__,string).T 'CypherQueryBuilder.MatchQuery.Update<T,K>(System.Linq.Expressions.Expression<System.Func<T,K>>, System.Linq.Expressions.Expression<System.Func<T,K>>, string).T')[,](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[K](README.md#CypherQueryBuilder.MatchQuery.Update_T,K_(System.Linq.Expressions.Expression_System.Func_T,K__,System.Linq.Expressions.Expression_System.Func_T,K__,string).K 'CypherQueryBuilder.MatchQuery.Update<T,K>(System.Linq.Expressions.Expression<System.Func<T,K>>, System.Linq.Expressions.Expression<System.Func<T,K>>, string).K')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')
 
 <a name='CypherQueryBuilder.MatchQuery.Update_T,K_(System.Linq.Expressions.Expression_System.Func_T,K__,System.Linq.Expressions.Expression_System.Func_T,K__,string).valueSelector'></a>
 
-`valueSelector` [System.Linq.Expressions.Expression&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')[System.Func&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[T](index.md#CypherQueryBuilder.MatchQuery.Update_T,K_(System.Linq.Expressions.Expression_System.Func_T,K__,System.Linq.Expressions.Expression_System.Func_T,K__,string).T 'CypherQueryBuilder.MatchQuery.Update<T,K>(System.Linq.Expressions.Expression<System.Func<T,K>>, System.Linq.Expressions.Expression<System.Func<T,K>>, string).T')[,](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[K](index.md#CypherQueryBuilder.MatchQuery.Update_T,K_(System.Linq.Expressions.Expression_System.Func_T,K__,System.Linq.Expressions.Expression_System.Func_T,K__,string).K 'CypherQueryBuilder.MatchQuery.Update<T,K>(System.Linq.Expressions.Expression<System.Func<T,K>>, System.Linq.Expressions.Expression<System.Func<T,K>>, string).K')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')
+`valueSelector` [System.Linq.Expressions.Expression&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')[System.Func&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[T](README.md#CypherQueryBuilder.MatchQuery.Update_T,K_(System.Linq.Expressions.Expression_System.Func_T,K__,System.Linq.Expressions.Expression_System.Func_T,K__,string).T 'CypherQueryBuilder.MatchQuery.Update<T,K>(System.Linq.Expressions.Expression<System.Func<T,K>>, System.Linq.Expressions.Expression<System.Func<T,K>>, string).T')[,](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[K](README.md#CypherQueryBuilder.MatchQuery.Update_T,K_(System.Linq.Expressions.Expression_System.Func_T,K__,System.Linq.Expressions.Expression_System.Func_T,K__,string).K 'CypherQueryBuilder.MatchQuery.Update<T,K>(System.Linq.Expressions.Expression<System.Func<T,K>>, System.Linq.Expressions.Expression<System.Func<T,K>>, string).K')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')
 
 <a name='CypherQueryBuilder.MatchQuery.Update_T,K_(System.Linq.Expressions.Expression_System.Func_T,K__,System.Linq.Expressions.Expression_System.Func_T,K__,string).alias'></a>
 
 `alias` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
 
 #### Returns
-[UpdateQuery](index.md#CypherQueryBuilder.UpdateQuery 'CypherQueryBuilder.UpdateQuery')  
+[UpdateQuery](README.md#CypherQueryBuilder.UpdateQuery 'CypherQueryBuilder.UpdateQuery')  
 `UpdateQuery`
 
 ### Example
@@ -850,7 +850,7 @@ public CypherQueryBuilder.MatchQuery Where(string clause);
 The clause.
 
 #### Returns
-[MatchQuery](index.md#CypherQueryBuilder.MatchQuery 'CypherQueryBuilder.MatchQuery')  
+[MatchQuery](README.md#CypherQueryBuilder.MatchQuery 'CypherQueryBuilder.MatchQuery')  
 <br/>
 
 ### Example
@@ -886,7 +886,7 @@ public CypherQueryBuilder.MatchQuery Where<T>(System.Linq.Expressions.Expression
 
 <a name='CypherQueryBuilder.MatchQuery.Where_T_(System.Linq.Expressions.Expression_System.Func_T,bool__,string).expr'></a>
 
-`expr` [System.Linq.Expressions.Expression&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')[System.Func&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[T](index.md#CypherQueryBuilder.MatchQuery.Where_T_(System.Linq.Expressions.Expression_System.Func_T,bool__,string).T 'CypherQueryBuilder.MatchQuery.Where<T>(System.Linq.Expressions.Expression<System.Func<T,bool>>, string).T')[,](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')
+`expr` [System.Linq.Expressions.Expression&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')[System.Func&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[T](README.md#CypherQueryBuilder.MatchQuery.Where_T_(System.Linq.Expressions.Expression_System.Func_T,bool__,string).T 'CypherQueryBuilder.MatchQuery.Where<T>(System.Linq.Expressions.Expression<System.Func<T,bool>>, string).T')[,](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')
 
 The expr.
 
@@ -895,7 +895,7 @@ The expr.
 `alias` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
 
 #### Returns
-[MatchQuery](index.md#CypherQueryBuilder.MatchQuery 'CypherQueryBuilder.MatchQuery')  
+[MatchQuery](README.md#CypherQueryBuilder.MatchQuery 'CypherQueryBuilder.MatchQuery')  
 <br/>
 
 ### Example
@@ -920,10 +920,10 @@ var r = 2010;
 public class Node : CypherQueryBuilder.Entity
 ```
 
-Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; [Entity](index.md#CypherQueryBuilder.Entity 'CypherQueryBuilder.Entity') &#129106; Node
+Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; [Entity](README.md#CypherQueryBuilder.Entity 'CypherQueryBuilder.Entity') &#129106; Node
 
 Derived  
-&#8627; [Node&lt;T&gt;](index.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')
+&#8627; [Node&lt;T&gt;](README.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')
 ### Methods
 
 <a name='CypherQueryBuilder.Node.Compile(System.Collections.Generic.HashSet_string_)'></a>
@@ -951,7 +951,7 @@ ValueTuple of (string match, string where).
 
 ## Node.Instance<T>(int) Method
 
-Create a new Instance of node type [T](index.md#CypherQueryBuilder.Node.Instance_T_(int).T 'CypherQueryBuilder.Node.Instance<T>(int).T') with alias suffixed with [sequence](index.md#CypherQueryBuilder.Node.Instance_T_(int).sequence 'CypherQueryBuilder.Node.Instance<T>(int).sequence')
+Create a new Instance of node type [T](README.md#CypherQueryBuilder.Node.Instance_T_(int).T 'CypherQueryBuilder.Node.Instance<T>(int).T') with alias suffixed with [sequence](README.md#CypherQueryBuilder.Node.Instance_T_(int).sequence 'CypherQueryBuilder.Node.Instance<T>(int).sequence')
 
 ```csharp
 public static CypherQueryBuilder.Node<T> Instance<T>(int sequence=0);
@@ -968,20 +968,20 @@ public static CypherQueryBuilder.Node<T> Instance<T>(int sequence=0);
 `sequence` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
 #### Returns
-[CypherQueryBuilder.Node&lt;](index.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')[T](index.md#CypherQueryBuilder.Node.Instance_T_(int).T 'CypherQueryBuilder.Node.Instance<T>(int).T')[&gt;](index.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')  
+[CypherQueryBuilder.Node&lt;](README.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')[T](README.md#CypherQueryBuilder.Node.Instance_T_(int).T 'CypherQueryBuilder.Node.Instance<T>(int).T')[&gt;](README.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')  
 New node of type T
 
 ### Remarks
-[sequence](index.md#CypherQueryBuilder.Node.Instance_T_(int).sequence 'CypherQueryBuilder.Node.Instance<T>(int).sequence') will be default to zero if not provided
+[sequence](README.md#CypherQueryBuilder.Node.Instance_T_(int).sequence 'CypherQueryBuilder.Node.Instance<T>(int).sequence') will be default to zero if not provided
 
 ### See Also
-- [Instance&lt;T&gt;(T, int)](index.md#CypherQueryBuilder.Node.Instance_T_(T,int) 'CypherQueryBuilder.Node.Instance<T>(T, int)')
+- [Instance&lt;T&gt;(T, int)](README.md#CypherQueryBuilder.Node.Instance_T_(T,int) 'CypherQueryBuilder.Node.Instance<T>(T, int)')
 
 <a name='CypherQueryBuilder.Node.Instance_T_(T,int)'></a>
 
 ## Node.Instance<T>(T, int) Method
 
-Create a new Instance of node type [T](index.md#CypherQueryBuilder.Node.Instance_T_(T,int).T 'CypherQueryBuilder.Node.Instance<T>(T, int).T') with alias suffixed with [sequence](index.md#CypherQueryBuilder.Node.Instance_T_(T,int).sequence 'CypherQueryBuilder.Node.Instance<T>(T, int).sequence')
+Create a new Instance of node type [T](README.md#CypherQueryBuilder.Node.Instance_T_(T,int).T 'CypherQueryBuilder.Node.Instance<T>(T, int).T') with alias suffixed with [sequence](README.md#CypherQueryBuilder.Node.Instance_T_(T,int).sequence 'CypherQueryBuilder.Node.Instance<T>(T, int).sequence')
 
 ```csharp
 public static CypherQueryBuilder.Node<T> Instance<T>(T obj, int sequence=0);
@@ -995,7 +995,7 @@ public static CypherQueryBuilder.Node<T> Instance<T>(T obj, int sequence=0);
 
 <a name='CypherQueryBuilder.Node.Instance_T_(T,int).obj'></a>
 
-`obj` [T](index.md#CypherQueryBuilder.Node.Instance_T_(T,int).T 'CypherQueryBuilder.Node.Instance<T>(T, int).T')
+`obj` [T](README.md#CypherQueryBuilder.Node.Instance_T_(T,int).T 'CypherQueryBuilder.Node.Instance<T>(T, int).T')
 
 The object.
 
@@ -1004,14 +1004,14 @@ The object.
 `sequence` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
 #### Returns
-[CypherQueryBuilder.Node&lt;](index.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')[T](index.md#CypherQueryBuilder.Node.Instance_T_(T,int).T 'CypherQueryBuilder.Node.Instance<T>(T, int).T')[&gt;](index.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')  
+[CypherQueryBuilder.Node&lt;](README.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')[T](README.md#CypherQueryBuilder.Node.Instance_T_(T,int).T 'CypherQueryBuilder.Node.Instance<T>(T, int).T')[&gt;](README.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')  
 New node of type T
 
 ### Remarks
-[sequence](index.md#CypherQueryBuilder.Node.Instance_T_(T,int).sequence 'CypherQueryBuilder.Node.Instance<T>(T, int).sequence') will be default to zero if not provided
+[sequence](README.md#CypherQueryBuilder.Node.Instance_T_(T,int).sequence 'CypherQueryBuilder.Node.Instance<T>(T, int).sequence') will be default to zero if not provided
 
 ### See Also
-- [Instance&lt;T&gt;(int)](index.md#CypherQueryBuilder.Node.Instance_T_(int) 'CypherQueryBuilder.Node.Instance<T>(int)')
+- [Instance&lt;T&gt;(int)](README.md#CypherQueryBuilder.Node.Instance_T_(int) 'CypherQueryBuilder.Node.Instance<T>(int)')
 
 <a name='CypherQueryBuilder.Node.WithLabels(string[])'></a>
 
@@ -1033,7 +1033,7 @@ The labels.
 Implements [WithLabels(string[])](https://docs.microsoft.com/en-us/dotnet/api/CypherQueryBuilder.IEntity.WithLabels#CypherQueryBuilder_IEntity_WithLabels_System_String[]_ 'CypherQueryBuilder.IEntity.WithLabels(System.String[])')
 
 #### Returns
-[Node](index.md#CypherQueryBuilder.Node 'CypherQueryBuilder.Node')
+[Node](README.md#CypherQueryBuilder.Node 'CypherQueryBuilder.Node')
 
 <a name='CypherQueryBuilder.Node.WithProperty(object)'></a>
 
@@ -1055,11 +1055,11 @@ The object.
 Implements [WithProperty(object)](https://docs.microsoft.com/en-us/dotnet/api/CypherQueryBuilder.IEntity.WithProperty#CypherQueryBuilder_IEntity_WithProperty_System_Object_ 'CypherQueryBuilder.IEntity.WithProperty(System.Object)')
 
 #### Returns
-[Node](index.md#CypherQueryBuilder.Node 'CypherQueryBuilder.Node')  
+[Node](README.md#CypherQueryBuilder.Node 'CypherQueryBuilder.Node')  
 The same node
 
 ### See Also
-- [WithProperty(string, object)](index.md#CypherQueryBuilder.Node.WithProperty(string,object) 'CypherQueryBuilder.Node.WithProperty(string, object)')
+- [WithProperty(string, object)](README.md#CypherQueryBuilder.Node.WithProperty(string,object) 'CypherQueryBuilder.Node.WithProperty(string, object)')
 
 <a name='CypherQueryBuilder.Node.WithProperty(string,object)'></a>
 
@@ -1087,11 +1087,11 @@ The value.
 Implements [WithProperty(string, object)](https://docs.microsoft.com/en-us/dotnet/api/CypherQueryBuilder.IEntity.WithProperty#CypherQueryBuilder_IEntity_WithProperty_System_String,System_Object_ 'CypherQueryBuilder.IEntity.WithProperty(System.String,System.Object)')
 
 #### Returns
-[Node](index.md#CypherQueryBuilder.Node 'CypherQueryBuilder.Node')  
+[Node](README.md#CypherQueryBuilder.Node 'CypherQueryBuilder.Node')  
 The same node
 
 ### See Also
-- [WithProperty(object)](index.md#CypherQueryBuilder.Node.WithProperty(object) 'CypherQueryBuilder.Node.WithProperty(object)')
+- [WithProperty(object)](README.md#CypherQueryBuilder.Node.WithProperty(object) 'CypherQueryBuilder.Node.WithProperty(object)')
 
 <a name='CypherQueryBuilder.Node.WithRelation(CypherQueryBuilder.Node,string,object,bool,string[])'></a>
 
@@ -1106,7 +1106,7 @@ public CypherQueryBuilder.Node WithRelation(CypherQueryBuilder.Node to, string r
 
 <a name='CypherQueryBuilder.Node.WithRelation(CypherQueryBuilder.Node,string,object,bool,string[]).to'></a>
 
-`to` [Node](index.md#CypherQueryBuilder.Node 'CypherQueryBuilder.Node')
+`to` [Node](README.md#CypherQueryBuilder.Node 'CypherQueryBuilder.Node')
 
 To.
 
@@ -1135,7 +1135,7 @@ if set to `true` [is forward].
 The labels.
 
 #### Returns
-[Node](index.md#CypherQueryBuilder.Node 'CypherQueryBuilder.Node')  
+[Node](README.md#CypherQueryBuilder.Node 'CypherQueryBuilder.Node')  
 The same node
 
 <a name='CypherQueryBuilder.Node.WithRelation_R_(CypherQueryBuilder.Node,R,int,bool,string[])'></a>
@@ -1156,13 +1156,13 @@ public CypherQueryBuilder.Node WithRelation<R>(CypherQueryBuilder.Node to, R ins
 
 <a name='CypherQueryBuilder.Node.WithRelation_R_(CypherQueryBuilder.Node,R,int,bool,string[]).to'></a>
 
-`to` [Node](index.md#CypherQueryBuilder.Node 'CypherQueryBuilder.Node')
+`to` [Node](README.md#CypherQueryBuilder.Node 'CypherQueryBuilder.Node')
 
 To.
 
 <a name='CypherQueryBuilder.Node.WithRelation_R_(CypherQueryBuilder.Node,R,int,bool,string[]).instance'></a>
 
-`instance` [R](index.md#CypherQueryBuilder.Node.WithRelation_R_(CypherQueryBuilder.Node,R,int,bool,string[]).R 'CypherQueryBuilder.Node.WithRelation<R>(CypherQueryBuilder.Node, R, int, bool, string[]).R')
+`instance` [R](README.md#CypherQueryBuilder.Node.WithRelation_R_(CypherQueryBuilder.Node,R,int,bool,string[]).R 'CypherQueryBuilder.Node.WithRelation<R>(CypherQueryBuilder.Node, R, int, bool, string[]).R')
 
 The instance for the relation.
 
@@ -1185,7 +1185,7 @@ if set to `true` [is forward].
 The labels.
 
 #### Returns
-[Node](index.md#CypherQueryBuilder.Node 'CypherQueryBuilder.Node')  
+[Node](README.md#CypherQueryBuilder.Node 'CypherQueryBuilder.Node')  
 <br/>
 
 ### Example
@@ -1210,14 +1210,14 @@ public class Node<T> : CypherQueryBuilder.Node
 
 `T`
 
-Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; [Entity](index.md#CypherQueryBuilder.Entity 'CypherQueryBuilder.Entity') &#129106; [Node](index.md#CypherQueryBuilder.Node 'CypherQueryBuilder.Node') &#129106; Node<T>
+Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; [Entity](README.md#CypherQueryBuilder.Entity 'CypherQueryBuilder.Entity') &#129106; [Node](README.md#CypherQueryBuilder.Node 'CypherQueryBuilder.Node') &#129106; Node<T>
 ### Methods
 
 <a name='CypherQueryBuilder.Node_T_.Instance(CypherQueryBuilder.Node_T_,int)'></a>
 
 ## Node<T>.Instance(Node<T>, int) Method
 
-Create a new Instance of [node](index.md#CypherQueryBuilder.Node_T_.Instance(CypherQueryBuilder.Node_T_,int).node 'CypherQueryBuilder.Node<T>.Instance(CypherQueryBuilder.Node<T>, int).node') type <span class="typeparameter">T</span> with alias suffixed with [sequence](index.md#CypherQueryBuilder.Node_T_.Instance(CypherQueryBuilder.Node_T_,int).sequence 'CypherQueryBuilder.Node<T>.Instance(CypherQueryBuilder.Node<T>, int).sequence')
+Create a new Instance of [node](README.md#CypherQueryBuilder.Node_T_.Instance(CypherQueryBuilder.Node_T_,int).node 'CypherQueryBuilder.Node<T>.Instance(CypherQueryBuilder.Node<T>, int).node') type <span class="typeparameter">T</span> with alias suffixed with [sequence](README.md#CypherQueryBuilder.Node_T_.Instance(CypherQueryBuilder.Node_T_,int).sequence 'CypherQueryBuilder.Node<T>.Instance(CypherQueryBuilder.Node<T>, int).sequence')
 
 ```csharp
 public static CypherQueryBuilder.Node<T> Instance(out CypherQueryBuilder.Node<T> node, int sequence=0);
@@ -1226,7 +1226,7 @@ public static CypherQueryBuilder.Node<T> Instance(out CypherQueryBuilder.Node<T>
 
 <a name='CypherQueryBuilder.Node_T_.Instance(CypherQueryBuilder.Node_T_,int).node'></a>
 
-`node` [CypherQueryBuilder.Node&lt;](index.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')[T](index.md#CypherQueryBuilder.Node_T_.T 'CypherQueryBuilder.Node<T>.T')[&gt;](index.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')
+`node` [CypherQueryBuilder.Node&lt;](README.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')[T](README.md#CypherQueryBuilder.Node_T_.T 'CypherQueryBuilder.Node<T>.T')[&gt;](README.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')
 
 out parameter
 
@@ -1235,8 +1235,8 @@ out parameter
 `sequence` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
 #### Returns
-[CypherQueryBuilder.Node&lt;](index.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')[T](index.md#CypherQueryBuilder.Node_T_.T 'CypherQueryBuilder.Node<T>.T')[&gt;](index.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')  
-New [node](index.md#CypherQueryBuilder.Node_T_.Instance(CypherQueryBuilder.Node_T_,int).node 'CypherQueryBuilder.Node<T>.Instance(CypherQueryBuilder.Node<T>, int).node') of type T
+[CypherQueryBuilder.Node&lt;](README.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')[T](README.md#CypherQueryBuilder.Node_T_.T 'CypherQueryBuilder.Node<T>.T')[&gt;](README.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')  
+New [node](README.md#CypherQueryBuilder.Node_T_.Instance(CypherQueryBuilder.Node_T_,int).node 'CypherQueryBuilder.Node<T>.Instance(CypherQueryBuilder.Node<T>, int).node') of type T
 
 ### Example
   
@@ -1250,17 +1250,17 @@ Node<Domain>.Instance(out var domainNode).Where(p => p.Uid == "TestDomain");
 ```
 
 ### Remarks
-[sequence](index.md#CypherQueryBuilder.Node_T_.Instance(CypherQueryBuilder.Node_T_,int).sequence 'CypherQueryBuilder.Node<T>.Instance(CypherQueryBuilder.Node<T>, int).sequence') will be default to zero if not provided
+[sequence](README.md#CypherQueryBuilder.Node_T_.Instance(CypherQueryBuilder.Node_T_,int).sequence 'CypherQueryBuilder.Node<T>.Instance(CypherQueryBuilder.Node<T>, int).sequence') will be default to zero if not provided
 
 ### See Also
-- [Instance(int)](index.md#CypherQueryBuilder.Node_T_.Instance(int) 'CypherQueryBuilder.Node<T>.Instance(int)')
-- [Instance(T, int)](index.md#CypherQueryBuilder.Node_T_.Instance(T,int) 'CypherQueryBuilder.Node<T>.Instance(T, int)')
+- [Instance(int)](README.md#CypherQueryBuilder.Node_T_.Instance(int) 'CypherQueryBuilder.Node<T>.Instance(int)')
+- [Instance(T, int)](README.md#CypherQueryBuilder.Node_T_.Instance(T,int) 'CypherQueryBuilder.Node<T>.Instance(T, int)')
 
 <a name='CypherQueryBuilder.Node_T_.Instance(int)'></a>
 
 ## Node<T>.Instance(int) Method
 
-Create a new Instance of node type [T](index.md#CypherQueryBuilder.Node_T_.T 'CypherQueryBuilder.Node<T>.T') with alias suffixed with [sequence](index.md#CypherQueryBuilder.Node_T_.Instance(int).sequence 'CypherQueryBuilder.Node<T>.Instance(int).sequence')
+Create a new Instance of node type [T](README.md#CypherQueryBuilder.Node_T_.T 'CypherQueryBuilder.Node<T>.T') with alias suffixed with [sequence](README.md#CypherQueryBuilder.Node_T_.Instance(int).sequence 'CypherQueryBuilder.Node<T>.Instance(int).sequence')
 
 ```csharp
 public static CypherQueryBuilder.Node<T> Instance(int sequence=0);
@@ -1272,21 +1272,21 @@ public static CypherQueryBuilder.Node<T> Instance(int sequence=0);
 `sequence` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
 #### Returns
-[CypherQueryBuilder.Node&lt;](index.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')[T](index.md#CypherQueryBuilder.Node_T_.T 'CypherQueryBuilder.Node<T>.T')[&gt;](index.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')  
+[CypherQueryBuilder.Node&lt;](README.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')[T](README.md#CypherQueryBuilder.Node_T_.T 'CypherQueryBuilder.Node<T>.T')[&gt;](README.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')  
 New node of type T
 
 ### Remarks
-[sequence](index.md#CypherQueryBuilder.Node_T_.Instance(int).sequence 'CypherQueryBuilder.Node<T>.Instance(int).sequence') will be default to zero if not provided
+[sequence](README.md#CypherQueryBuilder.Node_T_.Instance(int).sequence 'CypherQueryBuilder.Node<T>.Instance(int).sequence') will be default to zero if not provided
 
 ### See Also
-- [Instance(int)](index.md#CypherQueryBuilder.Node_T_.Instance(int) 'CypherQueryBuilder.Node<T>.Instance(int)')
-- [Instance(Node&lt;T&gt;, int)](index.md#CypherQueryBuilder.Node_T_.Instance(CypherQueryBuilder.Node_T_,int) 'CypherQueryBuilder.Node<T>.Instance(CypherQueryBuilder.Node<T>, int)')
+- [Instance(int)](README.md#CypherQueryBuilder.Node_T_.Instance(int) 'CypherQueryBuilder.Node<T>.Instance(int)')
+- [Instance(Node&lt;T&gt;, int)](README.md#CypherQueryBuilder.Node_T_.Instance(CypherQueryBuilder.Node_T_,int) 'CypherQueryBuilder.Node<T>.Instance(CypherQueryBuilder.Node<T>, int)')
 
 <a name='CypherQueryBuilder.Node_T_.Instance(T,int)'></a>
 
 ## Node<T>.Instance(T, int) Method
 
-Create a new Instance of node type [T](index.md#CypherQueryBuilder.Node_T_.T 'CypherQueryBuilder.Node<T>.T') with alias suffixed with [sequence](index.md#CypherQueryBuilder.Node_T_.Instance(T,int).sequence 'CypherQueryBuilder.Node<T>.Instance(T, int).sequence')
+Create a new Instance of node type [T](README.md#CypherQueryBuilder.Node_T_.T 'CypherQueryBuilder.Node<T>.T') with alias suffixed with [sequence](README.md#CypherQueryBuilder.Node_T_.Instance(T,int).sequence 'CypherQueryBuilder.Node<T>.Instance(T, int).sequence')
 
 ```csharp
 public static CypherQueryBuilder.Node<T> Instance(T obj, int sequence=0);
@@ -1295,7 +1295,7 @@ public static CypherQueryBuilder.Node<T> Instance(T obj, int sequence=0);
 
 <a name='CypherQueryBuilder.Node_T_.Instance(T,int).obj'></a>
 
-`obj` [T](index.md#CypherQueryBuilder.Node_T_.T 'CypherQueryBuilder.Node<T>.T')
+`obj` [T](README.md#CypherQueryBuilder.Node_T_.T 'CypherQueryBuilder.Node<T>.T')
 
 The object.
 
@@ -1306,15 +1306,15 @@ The object.
 The sequence.
 
 #### Returns
-[CypherQueryBuilder.Node&lt;](index.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')[T](index.md#CypherQueryBuilder.Node_T_.T 'CypherQueryBuilder.Node<T>.T')[&gt;](index.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')  
+[CypherQueryBuilder.Node&lt;](README.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')[T](README.md#CypherQueryBuilder.Node_T_.T 'CypherQueryBuilder.Node<T>.T')[&gt;](README.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')  
 New node of type T
 
 ### Remarks
-[sequence](index.md#CypherQueryBuilder.Node_T_.Instance(T,int).sequence 'CypherQueryBuilder.Node<T>.Instance(T, int).sequence') will be default to zero if not provided
+[sequence](README.md#CypherQueryBuilder.Node_T_.Instance(T,int).sequence 'CypherQueryBuilder.Node<T>.Instance(T, int).sequence') will be default to zero if not provided
 
 ### See Also
-- [Instance(int)](index.md#CypherQueryBuilder.Node_T_.Instance(int) 'CypherQueryBuilder.Node<T>.Instance(int)')
-- [Instance(Node&lt;T&gt;, int)](index.md#CypherQueryBuilder.Node_T_.Instance(CypherQueryBuilder.Node_T_,int) 'CypherQueryBuilder.Node<T>.Instance(CypherQueryBuilder.Node<T>, int)')
+- [Instance(int)](README.md#CypherQueryBuilder.Node_T_.Instance(int) 'CypherQueryBuilder.Node<T>.Instance(int)')
+- [Instance(Node&lt;T&gt;, int)](README.md#CypherQueryBuilder.Node_T_.Instance(CypherQueryBuilder.Node_T_,int) 'CypherQueryBuilder.Node<T>.Instance(CypherQueryBuilder.Node<T>, int)')
 
 <a name='CypherQueryBuilder.Node_T_.Where(System.Linq.Expressions.Expression_System.Func_T,bool__)'></a>
 
@@ -1329,12 +1329,12 @@ public CypherQueryBuilder.Node<T> Where(System.Linq.Expressions.Expression<Syste
 
 <a name='CypherQueryBuilder.Node_T_.Where(System.Linq.Expressions.Expression_System.Func_T,bool__).expr'></a>
 
-`expr` [System.Linq.Expressions.Expression&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')[System.Func&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[T](index.md#CypherQueryBuilder.Node_T_.T 'CypherQueryBuilder.Node<T>.T')[,](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')
+`expr` [System.Linq.Expressions.Expression&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')[System.Func&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[T](README.md#CypherQueryBuilder.Node_T_.T 'CypherQueryBuilder.Node<T>.T')[,](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')
 
 The expr.
 
 #### Returns
-[CypherQueryBuilder.Node&lt;](index.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')[T](index.md#CypherQueryBuilder.Node_T_.T 'CypherQueryBuilder.Node<T>.T')[&gt;](index.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')  
+[CypherQueryBuilder.Node&lt;](README.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')[T](README.md#CypherQueryBuilder.Node_T_.T 'CypherQueryBuilder.Node<T>.T')[&gt;](README.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')  
 The same node of type T
 
 <a name='CypherQueryBuilder.Node_T_.WithProperty(object)'></a>
@@ -1357,11 +1357,11 @@ The object.
 Implements [WithProperty(object)](https://docs.microsoft.com/en-us/dotnet/api/CypherQueryBuilder.IEntity.WithProperty#CypherQueryBuilder_IEntity_WithProperty_System_Object_ 'CypherQueryBuilder.IEntity.WithProperty(System.Object)')
 
 #### Returns
-[CypherQueryBuilder.Node&lt;](index.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')[T](index.md#CypherQueryBuilder.Node_T_.T 'CypherQueryBuilder.Node<T>.T')[&gt;](index.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')  
+[CypherQueryBuilder.Node&lt;](README.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')[T](README.md#CypherQueryBuilder.Node_T_.T 'CypherQueryBuilder.Node<T>.T')[&gt;](README.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')  
 The same node of type T
 
 ### See Also
-- [WithProperty(string, object)](index.md#CypherQueryBuilder.Node_T_.WithProperty(string,object) 'CypherQueryBuilder.Node<T>.WithProperty(string, object)')
+- [WithProperty(string, object)](README.md#CypherQueryBuilder.Node_T_.WithProperty(string,object) 'CypherQueryBuilder.Node<T>.WithProperty(string, object)')
 
 <a name='CypherQueryBuilder.Node_T_.WithProperty(string,object)'></a>
 
@@ -1389,11 +1389,11 @@ The value.
 Implements [WithProperty(string, object)](https://docs.microsoft.com/en-us/dotnet/api/CypherQueryBuilder.IEntity.WithProperty#CypherQueryBuilder_IEntity_WithProperty_System_String,System_Object_ 'CypherQueryBuilder.IEntity.WithProperty(System.String,System.Object)')
 
 #### Returns
-[CypherQueryBuilder.Node&lt;](index.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')[T](index.md#CypherQueryBuilder.Node_T_.T 'CypherQueryBuilder.Node<T>.T')[&gt;](index.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')  
+[CypherQueryBuilder.Node&lt;](README.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')[T](README.md#CypherQueryBuilder.Node_T_.T 'CypherQueryBuilder.Node<T>.T')[&gt;](README.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')  
 The same node of type T
 
 ### See Also
-- [WithProperty(object)](index.md#CypherQueryBuilder.Node_T_.WithProperty(object) 'CypherQueryBuilder.Node<T>.WithProperty(object)')
+- [WithProperty(object)](README.md#CypherQueryBuilder.Node_T_.WithProperty(object) 'CypherQueryBuilder.Node<T>.WithProperty(object)')
 
 <a name='CypherQueryBuilder.Node_T_.WithProperty(T)'></a>
 
@@ -1408,12 +1408,12 @@ public CypherQueryBuilder.Node<T> WithProperty(T obj);
 
 <a name='CypherQueryBuilder.Node_T_.WithProperty(T).obj'></a>
 
-`obj` [T](index.md#CypherQueryBuilder.Node_T_.T 'CypherQueryBuilder.Node<T>.T')
+`obj` [T](README.md#CypherQueryBuilder.Node_T_.T 'CypherQueryBuilder.Node<T>.T')
 
 The object.
 
 #### Returns
-[CypherQueryBuilder.Node&lt;](index.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')[T](index.md#CypherQueryBuilder.Node_T_.T 'CypherQueryBuilder.Node<T>.T')[&gt;](index.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')
+[CypherQueryBuilder.Node&lt;](README.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')[T](README.md#CypherQueryBuilder.Node_T_.T 'CypherQueryBuilder.Node<T>.T')[&gt;](README.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')
 
 <a name='CypherQueryBuilder.NodeCreationQuery'></a>
 
@@ -1423,7 +1423,7 @@ The object.
 public class NodeCreationQuery : CypherQueryBuilder.QueryBase
 ```
 
-Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; [Utility.Disposable](https://docs.microsoft.com/en-us/dotnet/api/Utility.Disposable 'Utility.Disposable') &#129106; [QueryBase](index.md#CypherQueryBuilder.QueryBase 'CypherQueryBuilder.QueryBase') &#129106; NodeCreationQuery
+Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; [Utility.Disposable](https://docs.microsoft.com/en-us/dotnet/api/Utility.Disposable 'Utility.Disposable') &#129106; [QueryBase](README.md#CypherQueryBuilder.QueryBase 'CypherQueryBuilder.QueryBase') &#129106; NodeCreationQuery
 ### Methods
 
 <a name='CypherQueryBuilder.NodeCreationQuery.Compile()'></a>
@@ -1453,18 +1453,18 @@ public CypherQueryBuilder.NodeCreationQuery Merge(CypherQueryBuilder.Node node, 
 
 <a name='CypherQueryBuilder.NodeCreationQuery.Merge(CypherQueryBuilder.Node,CypherQueryBuilder.Node[]).node'></a>
 
-`node` [Node](index.md#CypherQueryBuilder.Node 'CypherQueryBuilder.Node')
+`node` [Node](README.md#CypherQueryBuilder.Node 'CypherQueryBuilder.Node')
 
 The node.
 
 <a name='CypherQueryBuilder.NodeCreationQuery.Merge(CypherQueryBuilder.Node,CypherQueryBuilder.Node[]).otherNodes'></a>
 
-`otherNodes` [Node](index.md#CypherQueryBuilder.Node 'CypherQueryBuilder.Node')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
+`otherNodes` [Node](README.md#CypherQueryBuilder.Node 'CypherQueryBuilder.Node')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
 
 The other nodes.
 
 #### Returns
-[NodeCreationQuery](index.md#CypherQueryBuilder.NodeCreationQuery 'CypherQueryBuilder.NodeCreationQuery')
+[NodeCreationQuery](README.md#CypherQueryBuilder.NodeCreationQuery 'CypherQueryBuilder.NodeCreationQuery')
 
 <a name='CypherQueryBuilder.NodeCreationQuery.ReleaseResources()'></a>
 
@@ -1494,7 +1494,7 @@ public virtual CypherQueryBuilder.NodeCreationQuery Return(params string[] retur
 The returns.
 
 #### Returns
-[NodeCreationQuery](index.md#CypherQueryBuilder.NodeCreationQuery 'CypherQueryBuilder.NodeCreationQuery')
+[NodeCreationQuery](README.md#CypherQueryBuilder.NodeCreationQuery 'CypherQueryBuilder.NodeCreationQuery')
 
 <a name='CypherQueryBuilder.NodeCreationQuery.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool)'></a>
 
@@ -1514,13 +1514,13 @@ public virtual CypherQueryBuilder.NodeCreationQuery Return<T>(CypherQueryBuilder
 
 <a name='CypherQueryBuilder.NodeCreationQuery.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool).node'></a>
 
-`node` [CypherQueryBuilder.Node&lt;](index.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')[T](index.md#CypherQueryBuilder.NodeCreationQuery.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool).T 'CypherQueryBuilder.NodeCreationQuery.Return<T>(CypherQueryBuilder.Node<T>, System.Linq.Expressions.Expression<System.Func<T,object>>, bool).T')[&gt;](index.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')
+`node` [CypherQueryBuilder.Node&lt;](README.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')[T](README.md#CypherQueryBuilder.NodeCreationQuery.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool).T 'CypherQueryBuilder.NodeCreationQuery.Return<T>(CypherQueryBuilder.Node<T>, System.Linq.Expressions.Expression<System.Func<T,object>>, bool).T')[&gt;](README.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')
 
 The node.
 
 <a name='CypherQueryBuilder.NodeCreationQuery.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool).f'></a>
 
-`f` [System.Linq.Expressions.Expression&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')[System.Func&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[T](index.md#CypherQueryBuilder.NodeCreationQuery.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool).T 'CypherQueryBuilder.NodeCreationQuery.Return<T>(CypherQueryBuilder.Node<T>, System.Linq.Expressions.Expression<System.Func<T,object>>, bool).T')[,](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')
+`f` [System.Linq.Expressions.Expression&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')[System.Func&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[T](README.md#CypherQueryBuilder.NodeCreationQuery.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool).T 'CypherQueryBuilder.NodeCreationQuery.Return<T>(CypherQueryBuilder.Node<T>, System.Linq.Expressions.Expression<System.Func<T,object>>, bool).T')[,](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')
 
 The f.
 
@@ -1531,7 +1531,7 @@ The f.
 if set to `true` [alias to be removed].
 
 #### Returns
-[NodeCreationQuery](index.md#CypherQueryBuilder.NodeCreationQuery 'CypherQueryBuilder.NodeCreationQuery')
+[NodeCreationQuery](README.md#CypherQueryBuilder.NodeCreationQuery 'CypherQueryBuilder.NodeCreationQuery')
 
 <a name='CypherQueryBuilder.NodeCreationQuery.Return_T_(System.Linq.Expressions.Expression_System.Func_T,object__,bool)'></a>
 
@@ -1551,7 +1551,7 @@ public CypherQueryBuilder.NodeCreationQuery Return<T>(System.Linq.Expressions.Ex
 
 <a name='CypherQueryBuilder.NodeCreationQuery.Return_T_(System.Linq.Expressions.Expression_System.Func_T,object__,bool).f'></a>
 
-`f` [System.Linq.Expressions.Expression&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')[System.Func&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[T](index.md#CypherQueryBuilder.NodeCreationQuery.Return_T_(System.Linq.Expressions.Expression_System.Func_T,object__,bool).T 'CypherQueryBuilder.NodeCreationQuery.Return<T>(System.Linq.Expressions.Expression<System.Func<T,object>>, bool).T')[,](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')
+`f` [System.Linq.Expressions.Expression&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')[System.Func&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[T](README.md#CypherQueryBuilder.NodeCreationQuery.Return_T_(System.Linq.Expressions.Expression_System.Func_T,object__,bool).T 'CypherQueryBuilder.NodeCreationQuery.Return<T>(System.Linq.Expressions.Expression<System.Func<T,object>>, bool).T')[,](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')
 
 The f.
 
@@ -1562,7 +1562,7 @@ The f.
 if set to `true` [alias to be removed].
 
 #### Returns
-[NodeCreationQuery](index.md#CypherQueryBuilder.NodeCreationQuery 'CypherQueryBuilder.NodeCreationQuery')
+[NodeCreationQuery](README.md#CypherQueryBuilder.NodeCreationQuery 'CypherQueryBuilder.NodeCreationQuery')
 
 <a name='CypherQueryBuilder.Query'></a>
 
@@ -1596,18 +1596,18 @@ if set to `true` [to merge].
 
 <a name='CypherQueryBuilder.Query.Create(bool,CypherQueryBuilder.Node,CypherQueryBuilder.Node[]).node'></a>
 
-`node` [Node](index.md#CypherQueryBuilder.Node 'CypherQueryBuilder.Node')
+`node` [Node](README.md#CypherQueryBuilder.Node 'CypherQueryBuilder.Node')
 
 The node.
 
 <a name='CypherQueryBuilder.Query.Create(bool,CypherQueryBuilder.Node,CypherQueryBuilder.Node[]).otherNodes'></a>
 
-`otherNodes` [Node](index.md#CypherQueryBuilder.Node 'CypherQueryBuilder.Node')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
+`otherNodes` [Node](README.md#CypherQueryBuilder.Node 'CypherQueryBuilder.Node')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
 
 The other nodes.
 
 #### Returns
-[NodeCreationQuery](index.md#CypherQueryBuilder.NodeCreationQuery 'CypherQueryBuilder.NodeCreationQuery')
+[NodeCreationQuery](README.md#CypherQueryBuilder.NodeCreationQuery 'CypherQueryBuilder.NodeCreationQuery')
 
 <a name='CypherQueryBuilder.Query.Create(CypherQueryBuilder.Node,CypherQueryBuilder.Node[])'></a>
 
@@ -1622,18 +1622,18 @@ public static CypherQueryBuilder.NodeCreationQuery Create(CypherQueryBuilder.Nod
 
 <a name='CypherQueryBuilder.Query.Create(CypherQueryBuilder.Node,CypherQueryBuilder.Node[]).node'></a>
 
-`node` [Node](index.md#CypherQueryBuilder.Node 'CypherQueryBuilder.Node')
+`node` [Node](README.md#CypherQueryBuilder.Node 'CypherQueryBuilder.Node')
 
 Node to Instance
 
 <a name='CypherQueryBuilder.Query.Create(CypherQueryBuilder.Node,CypherQueryBuilder.Node[]).otherNodes'></a>
 
-`otherNodes` [Node](index.md#CypherQueryBuilder.Node 'CypherQueryBuilder.Node')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
+`otherNodes` [Node](README.md#CypherQueryBuilder.Node 'CypherQueryBuilder.Node')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
 
 Other nodes to match in case multiple nodes to be created.
 
 #### Returns
-[NodeCreationQuery](index.md#CypherQueryBuilder.NodeCreationQuery 'CypherQueryBuilder.NodeCreationQuery')  
+[NodeCreationQuery](README.md#CypherQueryBuilder.NodeCreationQuery 'CypherQueryBuilder.NodeCreationQuery')  
 NodeCreationQuery
 
 ### Example
@@ -1661,18 +1661,18 @@ public static CypherQueryBuilder.MatchQuery Match(CypherQueryBuilder.Node node, 
 
 <a name='CypherQueryBuilder.Query.Match(CypherQueryBuilder.Node,CypherQueryBuilder.Node[]).node'></a>
 
-`node` [Node](index.md#CypherQueryBuilder.Node 'CypherQueryBuilder.Node')
+`node` [Node](README.md#CypherQueryBuilder.Node 'CypherQueryBuilder.Node')
 
 Node to Match
 
 <a name='CypherQueryBuilder.Query.Match(CypherQueryBuilder.Node,CypherQueryBuilder.Node[]).otherNodes'></a>
 
-`otherNodes` [Node](index.md#CypherQueryBuilder.Node 'CypherQueryBuilder.Node')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
+`otherNodes` [Node](README.md#CypherQueryBuilder.Node 'CypherQueryBuilder.Node')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
 
 Other nodes to match in case multiple nodes to be matched
 
 #### Returns
-[MatchQuery](index.md#CypherQueryBuilder.MatchQuery 'CypherQueryBuilder.MatchQuery')  
+[MatchQuery](README.md#CypherQueryBuilder.MatchQuery 'CypherQueryBuilder.MatchQuery')  
 `MatchQuery`
 
 ### Example
@@ -1694,18 +1694,18 @@ public static CypherQueryBuilder.NodeCreationQuery Merge(CypherQueryBuilder.Node
 
 <a name='CypherQueryBuilder.Query.Merge(CypherQueryBuilder.Node,CypherQueryBuilder.Node[]).node'></a>
 
-`node` [Node](index.md#CypherQueryBuilder.Node 'CypherQueryBuilder.Node')
+`node` [Node](README.md#CypherQueryBuilder.Node 'CypherQueryBuilder.Node')
 
 The node.
 
 <a name='CypherQueryBuilder.Query.Merge(CypherQueryBuilder.Node,CypherQueryBuilder.Node[]).otherNodes'></a>
 
-`otherNodes` [Node](index.md#CypherQueryBuilder.Node 'CypherQueryBuilder.Node')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
+`otherNodes` [Node](README.md#CypherQueryBuilder.Node 'CypherQueryBuilder.Node')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
 
 The other nodes in case multiple nodes to be merged.
 
 #### Returns
-[NodeCreationQuery](index.md#CypherQueryBuilder.NodeCreationQuery 'CypherQueryBuilder.NodeCreationQuery')  
+[NodeCreationQuery](README.md#CypherQueryBuilder.NodeCreationQuery 'CypherQueryBuilder.NodeCreationQuery')  
 NodeCreationQuery
 
 ### Example
@@ -1731,8 +1731,8 @@ public abstract class QueryBase : Utility.Disposable
 Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; [Utility.Disposable](https://docs.microsoft.com/en-us/dotnet/api/Utility.Disposable 'Utility.Disposable') &#129106; QueryBase
 
 Derived  
-&#8627; [MatchQuery](index.md#CypherQueryBuilder.MatchQuery 'CypherQueryBuilder.MatchQuery')  
-&#8627; [NodeCreationQuery](index.md#CypherQueryBuilder.NodeCreationQuery 'CypherQueryBuilder.NodeCreationQuery')
+&#8627; [MatchQuery](README.md#CypherQueryBuilder.MatchQuery 'CypherQueryBuilder.MatchQuery')  
+&#8627; [NodeCreationQuery](README.md#CypherQueryBuilder.NodeCreationQuery 'CypherQueryBuilder.NodeCreationQuery')
 ### Methods
 
 <a name='CypherQueryBuilder.QueryBase.AssignmentExp()'></a>
@@ -1805,13 +1805,13 @@ public virtual CypherQueryBuilder.QueryBase Return<T>(CypherQueryBuilder.Node<T>
 
 <a name='CypherQueryBuilder.QueryBase.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool).node'></a>
 
-`node` [CypherQueryBuilder.Node&lt;](index.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')[T](index.md#CypherQueryBuilder.QueryBase.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool).T 'CypherQueryBuilder.QueryBase.Return<T>(CypherQueryBuilder.Node<T>, System.Linq.Expressions.Expression<System.Func<T,object>>, bool).T')[&gt;](index.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')
+`node` [CypherQueryBuilder.Node&lt;](README.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')[T](README.md#CypherQueryBuilder.QueryBase.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool).T 'CypherQueryBuilder.QueryBase.Return<T>(CypherQueryBuilder.Node<T>, System.Linq.Expressions.Expression<System.Func<T,object>>, bool).T')[&gt;](README.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')
 
 The node.
 
 <a name='CypherQueryBuilder.QueryBase.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool).f'></a>
 
-`f` [System.Linq.Expressions.Expression&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')[System.Func&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[T](index.md#CypherQueryBuilder.QueryBase.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool).T 'CypherQueryBuilder.QueryBase.Return<T>(CypherQueryBuilder.Node<T>, System.Linq.Expressions.Expression<System.Func<T,object>>, bool).T')[,](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')
+`f` [System.Linq.Expressions.Expression&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')[System.Func&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[T](README.md#CypherQueryBuilder.QueryBase.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool).T 'CypherQueryBuilder.QueryBase.Return<T>(CypherQueryBuilder.Node<T>, System.Linq.Expressions.Expression<System.Func<T,object>>, bool).T')[,](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')
 
 The f.
 
@@ -1822,11 +1822,11 @@ The f.
 if set to `true` [alias to be removed].
 
 #### Returns
-[QueryBase](index.md#CypherQueryBuilder.QueryBase 'CypherQueryBuilder.QueryBase')
+[QueryBase](README.md#CypherQueryBuilder.QueryBase 'CypherQueryBuilder.QueryBase')
 
 ### See Also
 - [CypherQueryBuilder.QueryBase.Return(System.String[])](https://docs.microsoft.com/en-us/dotnet/api/CypherQueryBuilder.QueryBase.Return#CypherQueryBuilder_QueryBase_Return_System_String[]_ 'CypherQueryBuilder.QueryBase.Return(System.String[])')
-- [Return&lt;T&gt;(string, Expression&lt;Func&lt;T,object&gt;&gt;, bool)](index.md#CypherQueryBuilder.QueryBase.Return_T_(string,System.Linq.Expressions.Expression_System.Func_T,object__,bool) 'CypherQueryBuilder.QueryBase.Return<T>(string, System.Linq.Expressions.Expression<System.Func<T,object>>, bool)')
+- [Return&lt;T&gt;(string, Expression&lt;Func&lt;T,object&gt;&gt;, bool)](README.md#CypherQueryBuilder.QueryBase.Return_T_(string,System.Linq.Expressions.Expression_System.Func_T,object__,bool) 'CypherQueryBuilder.QueryBase.Return<T>(string, System.Linq.Expressions.Expression<System.Func<T,object>>, bool)')
 
 <a name='CypherQueryBuilder.QueryBase.Return_T_(string,System.Linq.Expressions.Expression_System.Func_T,object__,bool)'></a>
 
@@ -1852,7 +1852,7 @@ The alias.
 
 <a name='CypherQueryBuilder.QueryBase.Return_T_(string,System.Linq.Expressions.Expression_System.Func_T,object__,bool).f'></a>
 
-`f` [System.Linq.Expressions.Expression&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')[System.Func&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[T](index.md#CypherQueryBuilder.QueryBase.Return_T_(string,System.Linq.Expressions.Expression_System.Func_T,object__,bool).T 'CypherQueryBuilder.QueryBase.Return<T>(string, System.Linq.Expressions.Expression<System.Func<T,object>>, bool).T')[,](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')
+`f` [System.Linq.Expressions.Expression&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')[System.Func&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[T](README.md#CypherQueryBuilder.QueryBase.Return_T_(string,System.Linq.Expressions.Expression_System.Func_T,object__,bool).T 'CypherQueryBuilder.QueryBase.Return<T>(string, System.Linq.Expressions.Expression<System.Func<T,object>>, bool).T')[,](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')
 
 The f.
 
@@ -1863,11 +1863,11 @@ The f.
 if set to `true` [alias to be removed].
 
 #### Returns
-[QueryBase](index.md#CypherQueryBuilder.QueryBase 'CypherQueryBuilder.QueryBase')
+[QueryBase](README.md#CypherQueryBuilder.QueryBase 'CypherQueryBuilder.QueryBase')
 
 ### See Also
 - [CypherQueryBuilder.QueryBase.Return(System.String[])](https://docs.microsoft.com/en-us/dotnet/api/CypherQueryBuilder.QueryBase.Return#CypherQueryBuilder_QueryBase_Return_System_String[]_ 'CypherQueryBuilder.QueryBase.Return(System.String[])')
-- [Return&lt;T&gt;(Node&lt;T&gt;, Expression&lt;Func&lt;T,object&gt;&gt;, bool)](index.md#CypherQueryBuilder.QueryBase.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool) 'CypherQueryBuilder.QueryBase.Return<T>(CypherQueryBuilder.Node<T>, System.Linq.Expressions.Expression<System.Func<T,object>>, bool)')
+- [Return&lt;T&gt;(Node&lt;T&gt;, Expression&lt;Func&lt;T,object&gt;&gt;, bool)](README.md#CypherQueryBuilder.QueryBase.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool) 'CypherQueryBuilder.QueryBase.Return<T>(CypherQueryBuilder.Node<T>, System.Linq.Expressions.Expression<System.Func<T,object>>, bool)')
 
 <a name='CypherQueryBuilder.Relation_T_'></a>
 
@@ -1882,7 +1882,7 @@ public class Relation<T> : CypherQueryBuilder.Relation
 
 `T`
 
-Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; [Entity](index.md#CypherQueryBuilder.Entity 'CypherQueryBuilder.Entity') &#129106; [CypherQueryBuilder.Relation](https://docs.microsoft.com/en-us/dotnet/api/CypherQueryBuilder.Relation 'CypherQueryBuilder.Relation') &#129106; Relation<T>
+Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; [Entity](README.md#CypherQueryBuilder.Entity 'CypherQueryBuilder.Entity') &#129106; [CypherQueryBuilder.Relation](https://docs.microsoft.com/en-us/dotnet/api/CypherQueryBuilder.Relation 'CypherQueryBuilder.Relation') &#129106; Relation<T>
 ### Methods
 
 <a name='CypherQueryBuilder.Relation_T_.Where(System.Linq.Expressions.Expression_System.Func_T,bool__)'></a>
@@ -1898,12 +1898,12 @@ public CypherQueryBuilder.Relation<T> Where(System.Linq.Expressions.Expression<S
 
 <a name='CypherQueryBuilder.Relation_T_.Where(System.Linq.Expressions.Expression_System.Func_T,bool__).expr'></a>
 
-`expr` [System.Linq.Expressions.Expression&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')[System.Func&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[T](index.md#CypherQueryBuilder.Relation_T_.T 'CypherQueryBuilder.Relation<T>.T')[,](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')
+`expr` [System.Linq.Expressions.Expression&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')[System.Func&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[T](README.md#CypherQueryBuilder.Relation_T_.T 'CypherQueryBuilder.Relation<T>.T')[,](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')
 
 The expr.
 
 #### Returns
-[CypherQueryBuilder.Relation&lt;](index.md#CypherQueryBuilder.Relation_T_ 'CypherQueryBuilder.Relation<T>')[T](index.md#CypherQueryBuilder.Relation_T_.T 'CypherQueryBuilder.Relation<T>.T')[&gt;](index.md#CypherQueryBuilder.Relation_T_ 'CypherQueryBuilder.Relation<T>')  
+[CypherQueryBuilder.Relation&lt;](README.md#CypherQueryBuilder.Relation_T_ 'CypherQueryBuilder.Relation<T>')[T](README.md#CypherQueryBuilder.Relation_T_.T 'CypherQueryBuilder.Relation<T>.T')[&gt;](README.md#CypherQueryBuilder.Relation_T_ 'CypherQueryBuilder.Relation<T>')  
 The same Relation of type T
 
 <a name='CypherQueryBuilder.UnionQuery'></a>
@@ -1914,7 +1914,7 @@ The same Relation of type T
 public class UnionQuery : CypherQueryBuilder.MatchQuery
 ```
 
-Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; [Utility.Disposable](https://docs.microsoft.com/en-us/dotnet/api/Utility.Disposable 'Utility.Disposable') &#129106; [QueryBase](index.md#CypherQueryBuilder.QueryBase 'CypherQueryBuilder.QueryBase') &#129106; [MatchQuery](index.md#CypherQueryBuilder.MatchQuery 'CypherQueryBuilder.MatchQuery') &#129106; UnionQuery
+Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; [Utility.Disposable](https://docs.microsoft.com/en-us/dotnet/api/Utility.Disposable 'Utility.Disposable') &#129106; [QueryBase](README.md#CypherQueryBuilder.QueryBase 'CypherQueryBuilder.QueryBase') &#129106; [MatchQuery](README.md#CypherQueryBuilder.MatchQuery 'CypherQueryBuilder.MatchQuery') &#129106; UnionQuery
 ### Methods
 
 <a name='CypherQueryBuilder.UnionQuery.CompileWithParemeters(System.Collections.Generic.Dictionary_string,object_)'></a>
@@ -1963,7 +1963,7 @@ var metaDataCount = 2;
 public class UpdateQuery : CypherQueryBuilder.MatchQuery
 ```
 
-Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; [Utility.Disposable](https://docs.microsoft.com/en-us/dotnet/api/Utility.Disposable 'Utility.Disposable') &#129106; [QueryBase](index.md#CypherQueryBuilder.QueryBase 'CypherQueryBuilder.QueryBase') &#129106; [MatchQuery](index.md#CypherQueryBuilder.MatchQuery 'CypherQueryBuilder.MatchQuery') &#129106; UpdateQuery
+Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; [Utility.Disposable](https://docs.microsoft.com/en-us/dotnet/api/Utility.Disposable 'Utility.Disposable') &#129106; [QueryBase](README.md#CypherQueryBuilder.QueryBase 'CypherQueryBuilder.QueryBase') &#129106; [MatchQuery](README.md#CypherQueryBuilder.MatchQuery 'CypherQueryBuilder.MatchQuery') &#129106; UpdateQuery
 ### Methods
 
 <a name='CypherQueryBuilder.UpdateQuery.Compile()'></a>
@@ -1981,7 +1981,7 @@ public override string Compile();
 Cypher Query string
 
 ### See Also
-- [CompileWithParemeters(Dictionary&lt;string,object&gt;)](index.md#CypherQueryBuilder.UpdateQuery.CompileWithParemeters(System.Collections.Generic.Dictionary_string,object_) 'CypherQueryBuilder.UpdateQuery.CompileWithParemeters(System.Collections.Generic.Dictionary<string,object>)')
+- [CompileWithParemeters(Dictionary&lt;string,object&gt;)](README.md#CypherQueryBuilder.UpdateQuery.CompileWithParemeters(System.Collections.Generic.Dictionary_string,object_) 'CypherQueryBuilder.UpdateQuery.CompileWithParemeters(System.Collections.Generic.Dictionary<string,object>)')
 
 <a name='CypherQueryBuilder.UpdateQuery.CompileWithParemeters(System.Collections.Generic.Dictionary_string,object_)'></a>
 
@@ -2019,4 +2019,4 @@ var metaDataCount = 2;
 ```
 
 ### See Also
-- [Compile()](index.md#CypherQueryBuilder.UpdateQuery.Compile() 'CypherQueryBuilder.UpdateQuery.Compile()')
+- [Compile()](README.md#CypherQueryBuilder.UpdateQuery.Compile() 'CypherQueryBuilder.UpdateQuery.Compile()')
