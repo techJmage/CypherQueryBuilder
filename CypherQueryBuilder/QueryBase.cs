@@ -10,6 +10,7 @@ public abstract partial class QueryBase : Disposable
 {
     protected List<string> returns = [];
     protected List<(string expr, bool isDescending)> orders = [];
+    protected bool isDistinct;
 
     /// <summary>
     /// Compiles this instance to Cypher Query string.
@@ -95,8 +96,11 @@ public abstract partial class QueryBase : Disposable
 
     protected virtual void BuildReturnPart(StringBuilder sb)
     {
+        var r = " RETURN ";
+        if (isDistinct)
+            r += "DISTINCT ";
         if (returns.Count > 0)
-            sb.Append(" RETURN " + string.Join(',', returns));
+            sb.Append(r + string.Join(',', returns));
         if (orders.Count > 0)
             foreach (var (expr, isDescending) in orders)
                 sb.Append($" ORDER BY {expr} " + (isDescending ? "DESC " : string.Empty));

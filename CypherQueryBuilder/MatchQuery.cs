@@ -8,6 +8,7 @@ public class MatchQuery : QueryBase
 {
     protected HashSet<Node> matches = [];
     protected LinkedList<(string clause, LogicalOperator op)> whereClause = [];
+
     internal MatchQuery(HashSet<Node> matches) => (this.matches) = (matches);
 
     #region Returns
@@ -380,4 +381,10 @@ public class MatchQuery : QueryBase
         return this;
     }
     #endregion
+
+    public virtual MatchQuery Distinct()
+    {
+        isDistinct = true;
+        return this;
+    }
 }
