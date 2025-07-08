@@ -43,9 +43,9 @@ public class NodeCreationQuery : QueryBase
     /// <param name="f">The f.</param>
     /// <param name="aliasToBeRemoved">if set to <c>true</c> [alias to be removed].</param>
     /// <returns></returns>
-    public override NodeCreationQuery Return<T>(Node<T> node, Expression<Func<T, object>> f, bool aliasToBeRemoved = true) => (NodeCreationQuery)base.Return(node, f, aliasToBeRemoved);
+    public override NodeCreationQuery Return<T>(Node<T> node, Expression<Func<T, object>> f, bool aliasToBeRemoved = true, string? collateAs = null) => (NodeCreationQuery)base.Return(node, f, aliasToBeRemoved);
 
-    public override NodeCreationQuery Return<T>(string? alias, Expression<Func<T, object>> f, bool aliasToBeRemoved = true) => (NodeCreationQuery)base.Return(alias, f, aliasToBeRemoved);
+    public override NodeCreationQuery Return<T>(string? alias, Expression<Func<T, object>> f, bool aliasToBeRemoved = true, string? collateAs = null) => (NodeCreationQuery)base.Return(alias, f, aliasToBeRemoved);
 
     #endregion Returns
 
