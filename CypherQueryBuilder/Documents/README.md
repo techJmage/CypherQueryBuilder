@@ -639,105 +639,117 @@ The returns.
 #### Returns
 [MatchQuery](README.md#CypherQueryBuilder.MatchQuery 'CypherQueryBuilder.MatchQuery')
 
-<a name='CypherQueryBuilder.MatchQuery.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool)'></a>
+<a name='CypherQueryBuilder.MatchQuery.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool,string)'></a>
 
-## MatchQuery.Return<T>(Node<T>, Expression<Func<T,object>>, bool) Method
+## MatchQuery.Return<T>(Node<T>, Expression<Func<T,object>>, bool, string) Method
 
 Returns the specified node.
 
 ```csharp
-public virtual CypherQueryBuilder.MatchQuery Return<T>(CypherQueryBuilder.Node<T> node, System.Linq.Expressions.Expression<System.Func<T,object>> f, bool aliasToBeRemoved=true);
+public virtual CypherQueryBuilder.MatchQuery Return<T>(CypherQueryBuilder.Node<T> node, System.Linq.Expressions.Expression<System.Func<T,object>> f, bool aliasToBeRemoved=true, string? collateAs=null);
 ```
 #### Type parameters
 
-<a name='CypherQueryBuilder.MatchQuery.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool).T'></a>
+<a name='CypherQueryBuilder.MatchQuery.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool,string).T'></a>
 
 `T`
 #### Parameters
 
-<a name='CypherQueryBuilder.MatchQuery.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool).node'></a>
+<a name='CypherQueryBuilder.MatchQuery.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool,string).node'></a>
 
-`node` [CypherQueryBuilder.Node&lt;](README.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')[T](README.md#CypherQueryBuilder.MatchQuery.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool).T 'CypherQueryBuilder.MatchQuery.Return<T>(CypherQueryBuilder.Node<T>, System.Linq.Expressions.Expression<System.Func<T,object>>, bool).T')[&gt;](README.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')
+`node` [CypherQueryBuilder.Node&lt;](README.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')[T](README.md#CypherQueryBuilder.MatchQuery.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool,string).T 'CypherQueryBuilder.MatchQuery.Return<T>(CypherQueryBuilder.Node<T>, System.Linq.Expressions.Expression<System.Func<T,object>>, bool, string).T')[&gt;](README.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')
 
 The node.
 
-<a name='CypherQueryBuilder.MatchQuery.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool).f'></a>
+<a name='CypherQueryBuilder.MatchQuery.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool,string).f'></a>
 
-`f` [System.Linq.Expressions.Expression&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')[System.Func&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[T](README.md#CypherQueryBuilder.MatchQuery.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool).T 'CypherQueryBuilder.MatchQuery.Return<T>(CypherQueryBuilder.Node<T>, System.Linq.Expressions.Expression<System.Func<T,object>>, bool).T')[,](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')
+`f` [System.Linq.Expressions.Expression&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')[System.Func&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[T](README.md#CypherQueryBuilder.MatchQuery.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool,string).T 'CypherQueryBuilder.MatchQuery.Return<T>(CypherQueryBuilder.Node<T>, System.Linq.Expressions.Expression<System.Func<T,object>>, bool, string).T')[,](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')
 
 The f.
 
-<a name='CypherQueryBuilder.MatchQuery.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool).aliasToBeRemoved'></a>
+<a name='CypherQueryBuilder.MatchQuery.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool,string).aliasToBeRemoved'></a>
 
 `aliasToBeRemoved` [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
 
 if set to `true` [alias to be removed].
 
+<a name='CypherQueryBuilder.MatchQuery.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool,string).collateAs'></a>
+
+`collateAs` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
+
 #### Returns
 [MatchQuery](README.md#CypherQueryBuilder.MatchQuery 'CypherQueryBuilder.MatchQuery')
 
-<a name='CypherQueryBuilder.MatchQuery.Return_T_(string,System.Linq.Expressions.Expression_System.Func_T,object__,bool)'></a>
+<a name='CypherQueryBuilder.MatchQuery.Return_T_(string,System.Linq.Expressions.Expression_System.Func_T,object__,bool,string)'></a>
 
-## MatchQuery.Return<T>(string, Expression<Func<T,object>>, bool) Method
+## MatchQuery.Return<T>(string, Expression<Func<T,object>>, bool, string) Method
 
 Returns the specified alias.
 
 ```csharp
-public virtual CypherQueryBuilder.MatchQuery Return<T>(string? alias, System.Linq.Expressions.Expression<System.Func<T,object>> f, bool aliasToBeRemoved=true);
+public virtual CypherQueryBuilder.MatchQuery Return<T>(string? alias, System.Linq.Expressions.Expression<System.Func<T,object>> f, bool aliasToBeRemoved=true, string? collateAs=null);
 ```
 #### Type parameters
 
-<a name='CypherQueryBuilder.MatchQuery.Return_T_(string,System.Linq.Expressions.Expression_System.Func_T,object__,bool).T'></a>
+<a name='CypherQueryBuilder.MatchQuery.Return_T_(string,System.Linq.Expressions.Expression_System.Func_T,object__,bool,string).T'></a>
 
 `T`
 #### Parameters
 
-<a name='CypherQueryBuilder.MatchQuery.Return_T_(string,System.Linq.Expressions.Expression_System.Func_T,object__,bool).alias'></a>
+<a name='CypherQueryBuilder.MatchQuery.Return_T_(string,System.Linq.Expressions.Expression_System.Func_T,object__,bool,string).alias'></a>
 
 `alias` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
 
 The alias.
 
-<a name='CypherQueryBuilder.MatchQuery.Return_T_(string,System.Linq.Expressions.Expression_System.Func_T,object__,bool).f'></a>
+<a name='CypherQueryBuilder.MatchQuery.Return_T_(string,System.Linq.Expressions.Expression_System.Func_T,object__,bool,string).f'></a>
 
-`f` [System.Linq.Expressions.Expression&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')[System.Func&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[T](README.md#CypherQueryBuilder.MatchQuery.Return_T_(string,System.Linq.Expressions.Expression_System.Func_T,object__,bool).T 'CypherQueryBuilder.MatchQuery.Return<T>(string, System.Linq.Expressions.Expression<System.Func<T,object>>, bool).T')[,](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')
+`f` [System.Linq.Expressions.Expression&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')[System.Func&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[T](README.md#CypherQueryBuilder.MatchQuery.Return_T_(string,System.Linq.Expressions.Expression_System.Func_T,object__,bool,string).T 'CypherQueryBuilder.MatchQuery.Return<T>(string, System.Linq.Expressions.Expression<System.Func<T,object>>, bool, string).T')[,](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')
 
 The f.
 
-<a name='CypherQueryBuilder.MatchQuery.Return_T_(string,System.Linq.Expressions.Expression_System.Func_T,object__,bool).aliasToBeRemoved'></a>
+<a name='CypherQueryBuilder.MatchQuery.Return_T_(string,System.Linq.Expressions.Expression_System.Func_T,object__,bool,string).aliasToBeRemoved'></a>
 
 `aliasToBeRemoved` [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
+
+<a name='CypherQueryBuilder.MatchQuery.Return_T_(string,System.Linq.Expressions.Expression_System.Func_T,object__,bool,string).collateAs'></a>
+
+`collateAs` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
 
 #### Returns
 [MatchQuery](README.md#CypherQueryBuilder.MatchQuery 'CypherQueryBuilder.MatchQuery')
 
-<a name='CypherQueryBuilder.MatchQuery.Return_T_(System.Linq.Expressions.Expression_System.Func_T,object__,bool)'></a>
+<a name='CypherQueryBuilder.MatchQuery.Return_T_(System.Linq.Expressions.Expression_System.Func_T,object__,bool,string)'></a>
 
-## MatchQuery.Return<T>(Expression<Func<T,object>>, bool) Method
+## MatchQuery.Return<T>(Expression<Func<T,object>>, bool, string) Method
 
 Returns the specified f.
 
 ```csharp
-public CypherQueryBuilder.MatchQuery Return<T>(System.Linq.Expressions.Expression<System.Func<T,object>>? f=null, bool aliasToBeRemoved=true);
+public CypherQueryBuilder.MatchQuery Return<T>(System.Linq.Expressions.Expression<System.Func<T,object>>? f=null, bool aliasToBeRemoved=true, string? collateAs=null);
 ```
 #### Type parameters
 
-<a name='CypherQueryBuilder.MatchQuery.Return_T_(System.Linq.Expressions.Expression_System.Func_T,object__,bool).T'></a>
+<a name='CypherQueryBuilder.MatchQuery.Return_T_(System.Linq.Expressions.Expression_System.Func_T,object__,bool,string).T'></a>
 
 `T`
 #### Parameters
 
-<a name='CypherQueryBuilder.MatchQuery.Return_T_(System.Linq.Expressions.Expression_System.Func_T,object__,bool).f'></a>
+<a name='CypherQueryBuilder.MatchQuery.Return_T_(System.Linq.Expressions.Expression_System.Func_T,object__,bool,string).f'></a>
 
-`f` [System.Linq.Expressions.Expression&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')[System.Func&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[T](README.md#CypherQueryBuilder.MatchQuery.Return_T_(System.Linq.Expressions.Expression_System.Func_T,object__,bool).T 'CypherQueryBuilder.MatchQuery.Return<T>(System.Linq.Expressions.Expression<System.Func<T,object>>, bool).T')[,](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')
+`f` [System.Linq.Expressions.Expression&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')[System.Func&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[T](README.md#CypherQueryBuilder.MatchQuery.Return_T_(System.Linq.Expressions.Expression_System.Func_T,object__,bool,string).T 'CypherQueryBuilder.MatchQuery.Return<T>(System.Linq.Expressions.Expression<System.Func<T,object>>, bool, string).T')[,](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')
 
 The f.
 
-<a name='CypherQueryBuilder.MatchQuery.Return_T_(System.Linq.Expressions.Expression_System.Func_T,object__,bool).aliasToBeRemoved'></a>
+<a name='CypherQueryBuilder.MatchQuery.Return_T_(System.Linq.Expressions.Expression_System.Func_T,object__,bool,string).aliasToBeRemoved'></a>
 
 `aliasToBeRemoved` [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
 
 if set to `true` [alias to be removed].
+
+<a name='CypherQueryBuilder.MatchQuery.Return_T_(System.Linq.Expressions.Expression_System.Func_T,object__,bool,string).collateAs'></a>
+
+`collateAs` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
 
 #### Returns
 [MatchQuery](README.md#CypherQueryBuilder.MatchQuery 'CypherQueryBuilder.MatchQuery')
@@ -1496,39 +1508,43 @@ The returns.
 #### Returns
 [NodeCreationQuery](README.md#CypherQueryBuilder.NodeCreationQuery 'CypherQueryBuilder.NodeCreationQuery')
 
-<a name='CypherQueryBuilder.NodeCreationQuery.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool)'></a>
+<a name='CypherQueryBuilder.NodeCreationQuery.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool,string)'></a>
 
-## NodeCreationQuery.Return<T>(Node<T>, Expression<Func<T,object>>, bool) Method
+## NodeCreationQuery.Return<T>(Node<T>, Expression<Func<T,object>>, bool, string) Method
 
 Returns the specified node.
 
 ```csharp
-public virtual CypherQueryBuilder.NodeCreationQuery Return<T>(CypherQueryBuilder.Node<T> node, System.Linq.Expressions.Expression<System.Func<T,object>> f, bool aliasToBeRemoved=true);
+public virtual CypherQueryBuilder.NodeCreationQuery Return<T>(CypherQueryBuilder.Node<T> node, System.Linq.Expressions.Expression<System.Func<T,object>> f, bool aliasToBeRemoved=true, string? collateAs=null);
 ```
 #### Type parameters
 
-<a name='CypherQueryBuilder.NodeCreationQuery.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool).T'></a>
+<a name='CypherQueryBuilder.NodeCreationQuery.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool,string).T'></a>
 
 `T`
 #### Parameters
 
-<a name='CypherQueryBuilder.NodeCreationQuery.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool).node'></a>
+<a name='CypherQueryBuilder.NodeCreationQuery.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool,string).node'></a>
 
-`node` [CypherQueryBuilder.Node&lt;](README.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')[T](README.md#CypherQueryBuilder.NodeCreationQuery.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool).T 'CypherQueryBuilder.NodeCreationQuery.Return<T>(CypherQueryBuilder.Node<T>, System.Linq.Expressions.Expression<System.Func<T,object>>, bool).T')[&gt;](README.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')
+`node` [CypherQueryBuilder.Node&lt;](README.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')[T](README.md#CypherQueryBuilder.NodeCreationQuery.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool,string).T 'CypherQueryBuilder.NodeCreationQuery.Return<T>(CypherQueryBuilder.Node<T>, System.Linq.Expressions.Expression<System.Func<T,object>>, bool, string).T')[&gt;](README.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')
 
 The node.
 
-<a name='CypherQueryBuilder.NodeCreationQuery.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool).f'></a>
+<a name='CypherQueryBuilder.NodeCreationQuery.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool,string).f'></a>
 
-`f` [System.Linq.Expressions.Expression&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')[System.Func&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[T](README.md#CypherQueryBuilder.NodeCreationQuery.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool).T 'CypherQueryBuilder.NodeCreationQuery.Return<T>(CypherQueryBuilder.Node<T>, System.Linq.Expressions.Expression<System.Func<T,object>>, bool).T')[,](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')
+`f` [System.Linq.Expressions.Expression&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')[System.Func&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[T](README.md#CypherQueryBuilder.NodeCreationQuery.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool,string).T 'CypherQueryBuilder.NodeCreationQuery.Return<T>(CypherQueryBuilder.Node<T>, System.Linq.Expressions.Expression<System.Func<T,object>>, bool, string).T')[,](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')
 
 The f.
 
-<a name='CypherQueryBuilder.NodeCreationQuery.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool).aliasToBeRemoved'></a>
+<a name='CypherQueryBuilder.NodeCreationQuery.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool,string).aliasToBeRemoved'></a>
 
 `aliasToBeRemoved` [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
 
 if set to `true` [alias to be removed].
+
+<a name='CypherQueryBuilder.NodeCreationQuery.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool,string).collateAs'></a>
+
+`collateAs` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
 
 #### Returns
 [NodeCreationQuery](README.md#CypherQueryBuilder.NodeCreationQuery 'CypherQueryBuilder.NodeCreationQuery')
@@ -1787,87 +1803,95 @@ public abstract string Compile();
 [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')  
 Cypher Query string
 
-<a name='CypherQueryBuilder.QueryBase.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool)'></a>
+<a name='CypherQueryBuilder.QueryBase.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool,string)'></a>
 
-## QueryBase.Return<T>(Node<T>, Expression<Func<T,object>>, bool) Method
+## QueryBase.Return<T>(Node<T>, Expression<Func<T,object>>, bool, string) Method
 
 Collect data to build return parts whilde compiling.
 
 ```csharp
-public virtual CypherQueryBuilder.QueryBase Return<T>(CypherQueryBuilder.Node<T> node, System.Linq.Expressions.Expression<System.Func<T,object>> f, bool aliasToBeRemoved=true);
+public virtual CypherQueryBuilder.QueryBase Return<T>(CypherQueryBuilder.Node<T> node, System.Linq.Expressions.Expression<System.Func<T,object>> f, bool aliasToBeRemoved=true, string? collateAs=null);
 ```
 #### Type parameters
 
-<a name='CypherQueryBuilder.QueryBase.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool).T'></a>
+<a name='CypherQueryBuilder.QueryBase.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool,string).T'></a>
 
 `T`
 #### Parameters
 
-<a name='CypherQueryBuilder.QueryBase.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool).node'></a>
+<a name='CypherQueryBuilder.QueryBase.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool,string).node'></a>
 
-`node` [CypherQueryBuilder.Node&lt;](README.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')[T](README.md#CypherQueryBuilder.QueryBase.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool).T 'CypherQueryBuilder.QueryBase.Return<T>(CypherQueryBuilder.Node<T>, System.Linq.Expressions.Expression<System.Func<T,object>>, bool).T')[&gt;](README.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')
+`node` [CypherQueryBuilder.Node&lt;](README.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')[T](README.md#CypherQueryBuilder.QueryBase.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool,string).T 'CypherQueryBuilder.QueryBase.Return<T>(CypherQueryBuilder.Node<T>, System.Linq.Expressions.Expression<System.Func<T,object>>, bool, string).T')[&gt;](README.md#CypherQueryBuilder.Node_T_ 'CypherQueryBuilder.Node<T>')
 
 The node.
 
-<a name='CypherQueryBuilder.QueryBase.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool).f'></a>
+<a name='CypherQueryBuilder.QueryBase.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool,string).f'></a>
 
-`f` [System.Linq.Expressions.Expression&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')[System.Func&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[T](README.md#CypherQueryBuilder.QueryBase.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool).T 'CypherQueryBuilder.QueryBase.Return<T>(CypherQueryBuilder.Node<T>, System.Linq.Expressions.Expression<System.Func<T,object>>, bool).T')[,](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')
+`f` [System.Linq.Expressions.Expression&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')[System.Func&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[T](README.md#CypherQueryBuilder.QueryBase.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool,string).T 'CypherQueryBuilder.QueryBase.Return<T>(CypherQueryBuilder.Node<T>, System.Linq.Expressions.Expression<System.Func<T,object>>, bool, string).T')[,](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')
 
 The f.
 
-<a name='CypherQueryBuilder.QueryBase.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool).aliasToBeRemoved'></a>
+<a name='CypherQueryBuilder.QueryBase.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool,string).aliasToBeRemoved'></a>
 
 `aliasToBeRemoved` [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
 
 if set to `true` [alias to be removed].
+
+<a name='CypherQueryBuilder.QueryBase.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool,string).collateAs'></a>
+
+`collateAs` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
 
 #### Returns
 [QueryBase](README.md#CypherQueryBuilder.QueryBase 'CypherQueryBuilder.QueryBase')
 
 ### See Also
 - [CypherQueryBuilder.QueryBase.Return(System.String[])](https://docs.microsoft.com/en-us/dotnet/api/CypherQueryBuilder.QueryBase.Return#CypherQueryBuilder_QueryBase_Return_System_String[]_ 'CypherQueryBuilder.QueryBase.Return(System.String[])')
-- [Return&lt;T&gt;(string, Expression&lt;Func&lt;T,object&gt;&gt;, bool)](README.md#CypherQueryBuilder.QueryBase.Return_T_(string,System.Linq.Expressions.Expression_System.Func_T,object__,bool) 'CypherQueryBuilder.QueryBase.Return<T>(string, System.Linq.Expressions.Expression<System.Func<T,object>>, bool)')
+- [Return&lt;T&gt;(string?, Expression&lt;Func&lt;T, object&gt;&gt;, bool)](https://docs.microsoft.com/en-us/dotnet/api/Return<T>#Return<T>_string?, Expression<Func<T, object>>, bool_ 'Return<T>(string?, Expression<Func<T, object>>, bool)')
 
-<a name='CypherQueryBuilder.QueryBase.Return_T_(string,System.Linq.Expressions.Expression_System.Func_T,object__,bool)'></a>
+<a name='CypherQueryBuilder.QueryBase.Return_T_(string,System.Linq.Expressions.Expression_System.Func_T,object__,bool,string)'></a>
 
-## QueryBase.Return<T>(string, Expression<Func<T,object>>, bool) Method
+## QueryBase.Return<T>(string, Expression<Func<T,object>>, bool, string) Method
 
 Collect data to build return parts whilde compiling.
 
 ```csharp
-public virtual CypherQueryBuilder.QueryBase Return<T>(string? alias, System.Linq.Expressions.Expression<System.Func<T,object>> f, bool aliasToBeRemoved=true);
+public virtual CypherQueryBuilder.QueryBase Return<T>(string? alias, System.Linq.Expressions.Expression<System.Func<T,object>> f, bool aliasToBeRemoved=true, string? collateAs=null);
 ```
 #### Type parameters
 
-<a name='CypherQueryBuilder.QueryBase.Return_T_(string,System.Linq.Expressions.Expression_System.Func_T,object__,bool).T'></a>
+<a name='CypherQueryBuilder.QueryBase.Return_T_(string,System.Linq.Expressions.Expression_System.Func_T,object__,bool,string).T'></a>
 
 `T`
 #### Parameters
 
-<a name='CypherQueryBuilder.QueryBase.Return_T_(string,System.Linq.Expressions.Expression_System.Func_T,object__,bool).alias'></a>
+<a name='CypherQueryBuilder.QueryBase.Return_T_(string,System.Linq.Expressions.Expression_System.Func_T,object__,bool,string).alias'></a>
 
 `alias` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
 
 The alias.
 
-<a name='CypherQueryBuilder.QueryBase.Return_T_(string,System.Linq.Expressions.Expression_System.Func_T,object__,bool).f'></a>
+<a name='CypherQueryBuilder.QueryBase.Return_T_(string,System.Linq.Expressions.Expression_System.Func_T,object__,bool,string).f'></a>
 
-`f` [System.Linq.Expressions.Expression&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')[System.Func&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[T](README.md#CypherQueryBuilder.QueryBase.Return_T_(string,System.Linq.Expressions.Expression_System.Func_T,object__,bool).T 'CypherQueryBuilder.QueryBase.Return<T>(string, System.Linq.Expressions.Expression<System.Func<T,object>>, bool).T')[,](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')
+`f` [System.Linq.Expressions.Expression&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')[System.Func&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[T](README.md#CypherQueryBuilder.QueryBase.Return_T_(string,System.Linq.Expressions.Expression_System.Func_T,object__,bool,string).T 'CypherQueryBuilder.QueryBase.Return<T>(string, System.Linq.Expressions.Expression<System.Func<T,object>>, bool, string).T')[,](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.Expression-1 'System.Linq.Expressions.Expression`1')
 
 The f.
 
-<a name='CypherQueryBuilder.QueryBase.Return_T_(string,System.Linq.Expressions.Expression_System.Func_T,object__,bool).aliasToBeRemoved'></a>
+<a name='CypherQueryBuilder.QueryBase.Return_T_(string,System.Linq.Expressions.Expression_System.Func_T,object__,bool,string).aliasToBeRemoved'></a>
 
 `aliasToBeRemoved` [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
 
 if set to `true` [alias to be removed].
+
+<a name='CypherQueryBuilder.QueryBase.Return_T_(string,System.Linq.Expressions.Expression_System.Func_T,object__,bool,string).collateAs'></a>
+
+`collateAs` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
 
 #### Returns
 [QueryBase](README.md#CypherQueryBuilder.QueryBase 'CypherQueryBuilder.QueryBase')
 
 ### See Also
 - [CypherQueryBuilder.QueryBase.Return(System.String[])](https://docs.microsoft.com/en-us/dotnet/api/CypherQueryBuilder.QueryBase.Return#CypherQueryBuilder_QueryBase_Return_System_String[]_ 'CypherQueryBuilder.QueryBase.Return(System.String[])')
-- [Return&lt;T&gt;(Node&lt;T&gt;, Expression&lt;Func&lt;T,object&gt;&gt;, bool)](README.md#CypherQueryBuilder.QueryBase.Return_T_(CypherQueryBuilder.Node_T_,System.Linq.Expressions.Expression_System.Func_T,object__,bool) 'CypherQueryBuilder.QueryBase.Return<T>(CypherQueryBuilder.Node<T>, System.Linq.Expressions.Expression<System.Func<T,object>>, bool)')
+- [Return&lt;T&gt;(Node&lt;T&gt;, Expression&lt;Func&lt;T, object&gt;&gt;, bool)](https://docs.microsoft.com/en-us/dotnet/api/Return<T>#Return<T>_Node<T>, Expression<Func<T, object>>, bool_ 'Return<T>(Node<T>, Expression<Func<T, object>>, bool)')
 
 <a name='CypherQueryBuilder.Relation_T_'></a>
 
