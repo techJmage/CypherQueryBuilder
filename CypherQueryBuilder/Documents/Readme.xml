@@ -96,7 +96,7 @@
             <param name="returns">The returns.</param>
             <returns></returns>
         </member>
-        <member name="M:CypherQueryBuilder.MatchQuery.Return``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Boolean)">
+        <member name="M:CypherQueryBuilder.MatchQuery.Return``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Boolean,System.String)">
             <summary>
             Returns the specified f.
             </summary>
@@ -105,7 +105,7 @@
             <param name="aliasToBeRemoved">if set to <c>true</c> [alias to be removed].</param>
             <returns></returns>
         </member>
-        <member name="M:CypherQueryBuilder.MatchQuery.Return``1(CypherQueryBuilder.Node{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Boolean)">
+        <member name="M:CypherQueryBuilder.MatchQuery.Return``1(CypherQueryBuilder.Node{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Boolean,System.String)">
             <summary>
             Returns the specified node.
             </summary>
@@ -115,7 +115,7 @@
             <param name="aliasToBeRemoved">if set to <c>true</c> [alias to be removed].</param>
             <returns></returns>
         </member>
-        <member name="M:CypherQueryBuilder.MatchQuery.Return``1(System.String,System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Boolean)">
+        <member name="M:CypherQueryBuilder.MatchQuery.Return``1(System.String,System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Boolean,System.String)">
             <summary>
             Returns the specified alias.
             </summary>
@@ -463,7 +463,7 @@
             <param name="aliasToBeRemoved">if set to <c>true</c> [alias to be removed].</param>
             <returns></returns>
         </member>
-        <member name="M:CypherQueryBuilder.NodeCreationQuery.Return``1(CypherQueryBuilder.Node{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Boolean)">
+        <member name="M:CypherQueryBuilder.NodeCreationQuery.Return``1(CypherQueryBuilder.Node{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Boolean,System.String)">
             <summary>
             Returns the specified node.
             </summary>
@@ -554,7 +554,7 @@
             <returns cref="T:System.String">Cypher Query string</returns>
         </member>
         <!-- Badly formed XML comment ignored for member "M:CypherQueryBuilder.QueryBase.Return(System.String[])" -->
-        <member name="M:CypherQueryBuilder.QueryBase.Return``1(CypherQueryBuilder.Node{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Boolean)">
+        <member name="M:CypherQueryBuilder.QueryBase.Return``1(CypherQueryBuilder.Node{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Boolean,System.String)">
             <summary>
             Collect data to build return parts whilde compiling.
             </summary>
@@ -564,9 +564,9 @@
             <param name="aliasToBeRemoved">if set to <c>true</c> [alias to be removed].</param>
             <returns></returns>
             <seealso cref="M:CypherQueryBuilder.QueryBase.Return(System.String[])"/>
-            <seealso cref="M:CypherQueryBuilder.QueryBase.Return``1(System.String,System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Boolean)"/>
+            <seealso cref="!:Return&lt;T&gt;(string?, Expression&lt;Func&lt;T, object&gt;&gt;, bool)"/>
         </member>
-        <member name="M:CypherQueryBuilder.QueryBase.Return``1(System.String,System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Boolean)">
+        <member name="M:CypherQueryBuilder.QueryBase.Return``1(System.String,System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Boolean,System.String)">
             <summary>
             Collect data to build return parts whilde compiling.
             </summary>
@@ -576,7 +576,7 @@
             <param name="aliasToBeRemoved">if set to <c>true</c> [alias to be removed].</param>
             <returns></returns>
             <seealso cref="M:CypherQueryBuilder.QueryBase.Return(System.String[])"/>
-            <seealso cref="M:CypherQueryBuilder.QueryBase.Return``1(CypherQueryBuilder.Node{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Boolean)"/>
+            <seealso cref="!:Return&lt;T&gt;(Node&lt;T&gt;, Expression&lt;Func&lt;T, object&gt;&gt;, bool)"/>
         </member>
         <member name="M:CypherQueryBuilder.QueryBase.AssignmentExp">
             <remarks>

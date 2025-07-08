@@ -10,6 +10,7 @@ public abstract partial class QueryBase : Disposable
 {
     protected List<string> returns = [];
     protected List<(string expr, bool isDescending)> orders = [];
+    protected bool isDistinct;
 
     /// <summary>
     /// Compiles this instance to Cypher Query string.
@@ -60,7 +61,7 @@ public abstract partial class QueryBase : Disposable
     /// <returns></returns>
     /// <seealso cref="Return(string[])"/>
     /// <seealso cref="Return{T}(string?, Expression{Func{T, object}}, bool)"/>
-    public virtual QueryBase Return<T>(Node<T> node, Expression<Func<T, object>> f, bool aliasToBeRemoved = true) => Return(node.Alias, f, aliasToBeRemoved);
+    public virtual QueryBase Return<T>(Node<T> node, Expression<Func<T, object>> f, bool aliasToBeRemoved = true, string? collateAs = null) => Return(node.Alias, f, aliasToBeRemoved, collateAs);
 
     /// <summary>
     /// Collect data to build return parts whilde compiling.
@@ -72,19 +73,23 @@ public abstract partial class QueryBase : Disposable
     /// <returns></returns>
     /// <seealso cref="Return(string[])"/>
     /// <seealso cref="Return{T}(Node{T}, Expression{Func{T, object}}, bool)"/>
-    public virtual QueryBase Return<T>(string? alias, Expression<Func<T, object>> f, bool aliasToBeRemoved = true)
+    public virtual QueryBase Return<T>(string? alias, Expression<Func<T, object>> f, bool aliasToBeRemoved = true, string? collateAs = null)
     {
+        var collate = !string.IsNullOrWhiteSpace(collateAs);
         var map = typeof(T).GetCypherPropertyMap(alias);
         var rq = f.ToCypherString(map);
         var assignmentExp = AssignmentExp();
-        if (assignmentExp.IsMatch(rq))
-            rq = assignmentExp.Replace(rq, m => $"{m.Groups["V"].Value} AS {m.Groups["K"]}");
+        var isAssignment = assignmentExp.IsMatch(rq);
+        if (isAssignment)
+            rq = assignmentExp.Replace(rq, m => collate ? $"{m.Groups["K"]}: {m.Groups["V"].Value}" : $"{m.Groups["V"].Value} AS {m.Groups["K"]}");
         else if (aliasToBeRemoved && alias != null)
         {
             var aliasRemovalLength = alias.Length + 1;
             foreach (var (_, v) in map)
-                rq = rq.Replace(v, $"{v} AS {v.Remove(0, aliasRemovalLength)}");
+                rq = rq.Replace(v, collate ? $"{v.Remove(0, aliasRemovalLength)}: {v}" : $"{v} AS {v.Remove(0, aliasRemovalLength)}");
         }
+        if ((isAssignment || (aliasToBeRemoved && alias != null)) && collate)
+            rq = $"{{ {rq} }} AS {collateAs}";
         return Return(rq);
     }
     protected virtual void AddOrder<T, K>(string? alias, Expression<Func<T, K>> keySelector, bool isDescending)
@@ -95,8 +100,11 @@ public abstract partial class QueryBase : Disposable
 
     protected virtual void BuildReturnPart(StringBuilder sb)
     {
+        var r = " RETURN ";
+        if (isDistinct)
+            r += "DISTINCT ";
         if (returns.Count > 0)
-            sb.Append(" RETURN " + string.Join(',', returns));
+            sb.Append(r + string.Join(',', returns));
         if (orders.Count > 0)
             foreach (var (expr, isDescending) in orders)
                 sb.Append($" ORDER BY {expr} " + (isDescending ? "DESC " : string.Empty));

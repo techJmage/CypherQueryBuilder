@@ -7,8 +7,17 @@ namespace CypherQueryBuilder;
 public class MatchQuery : QueryBase
 {
     protected HashSet<Node> matches = [];
+    protected HashSet<Node> optionalMatches = [];
     protected LinkedList<(string clause, LogicalOperator op)> whereClause = [];
+
     internal MatchQuery(HashSet<Node> matches) => (this.matches) = (matches);
+    internal MatchQuery(HashSet<Node> matches, bool isOptional)
+    {
+        if (!isOptional)
+            this.matches = matches;
+        else
+            optionalMatches = matches;
+    }
 
     #region Returns
 
@@ -39,25 +48,26 @@ public class MatchQuery : QueryBase
     /// <param name="f">The f.</param>
     /// <param name="aliasToBeRemoved">if set to <c>true</c> [alias to be removed].</param>
     /// <returns></returns>
-    public MatchQuery Return<T>(Expression<Func<T, object>>? f = null, bool aliasToBeRemoved = true)
+    public MatchQuery Return<T>(Expression<Func<T, object>>? f = null, bool aliasToBeRemoved = true, string? collateAs = null)
     {
         var alias = matches.Select(FindAlias<T>).FirstOrDefault(p => p.Length > 0);
-        if (f == null)
+        if (f != null)
+            return Return(alias, f, aliasToBeRemoved);
+        var t = typeof(T);
+        var ps = t.GetCypherProperties(alias);
+        var rq = string.Empty;
+        if (aliasToBeRemoved && alias != null)
         {
-            var t = typeof(T);
-            var ps = t.GetCypherProperties(alias);
-
-            if (aliasToBeRemoved && alias != null)
-            {
-                var aliasRemovalLength = alias.Length + 1;
-                var withoutAlias = ps.Select(p => $"{p} AS {p[aliasRemovalLength..]}");
-                returns.Add(string.Join(',', withoutAlias));
-            }
-            else
-                returns.Add(string.Join(',', ps));
-            return this;
+            var collate = !string.IsNullOrWhiteSpace(collateAs);
+            var aliasRemovalLength = alias.Length + 1;
+            var withoutAlias = ps.Select(p => collate ? $"{p[aliasRemovalLength..]}: {p}" : $"{p} AS {p[aliasRemovalLength..]}");
+            rq = string.Join(',', withoutAlias);
+            if (collate)
+                rq = $"{{ {rq} }} AS {collateAs}";
         }
-        return Return(alias, f, aliasToBeRemoved);
+        else
+            rq = string.Join(',', ps);
+        return Return(rq);
     }
 
     /// <summary>
@@ -68,7 +78,7 @@ public class MatchQuery : QueryBase
     /// <param name="f">The f.</param>
     /// <param name="aliasToBeRemoved">if set to <c>true</c> [alias to be removed].</param>
     /// <returns></returns>
-    public override MatchQuery Return<T>(Node<T> node, Expression<Func<T, object>> f, bool aliasToBeRemoved = true) => (MatchQuery)base.Return(node, f, aliasToBeRemoved);
+    public override MatchQuery Return<T>(Node<T> node, Expression<Func<T, object>> f, bool aliasToBeRemoved = true, string? collateAs = null) => (MatchQuery)base.Return(node, f, aliasToBeRemoved, collateAs);
 
     /// <summary>
     /// Returns the specified alias.
@@ -78,7 +88,7 @@ public class MatchQuery : QueryBase
     /// <param name="f">The f.</param>
     /// <param name="aliasToBeRemoved"></param>
     /// <returns></returns>
-    public override MatchQuery Return<T>(string? alias, Expression<Func<T, object>> f, bool aliasToBeRemoved = true) => (MatchQuery)base.Return(alias, f, aliasToBeRemoved);
+    public override MatchQuery Return<T>(string? alias, Expression<Func<T, object>> f, bool aliasToBeRemoved = true, string? collateAs = null) => (MatchQuery)base.Return(alias, f, aliasToBeRemoved, collateAs);
 
     /// <summary>
     /// Skips the specified skip.
@@ -275,14 +285,33 @@ public class MatchQuery : QueryBase
     /// <param name="sb">The sb.</param>
     protected void BuildMatchPart(StringBuilder sb)
     {
-        if (matches.Count == 0)
+        if (matches.Count == 0 && optionalMatches.Count == 0)
             return;
-        sb.Append("MATCH ");
         HashSet<string> matchedAliases = [];
-        var compiles = matches.Select(p => p.Compile(matchedAliases)).Where(p => !string.IsNullOrEmpty(p.match)).ToList();
-        var mtch = string.Join(',', compiles.Select(p => p.match));
-        sb.Append(mtch);
-        BuildWhereClause(sb, string.Join(" AND ", compiles.Where(p => !string.IsNullOrWhiteSpace(p.where)).Select(p => p.where)));
+        HashSet<string> whereClauses = [];
+        if (matches.Count > 0)
+            whereClauses.UnionWith(BuildMatch());
+        if (optionalMatches.Count > 0)
+            whereClauses.UnionWith(BuildOptionalMatch());
+        BuildWhereClause(sb, string.Join(" AND ", whereClauses));
+
+        IEnumerable<string> Build(HashSet<Node> matches)
+        {
+            var compiles = matches.Select(p => p.Compile(matchedAliases)).Where(p => !string.IsNullOrEmpty(p.match)).ToList();
+            var mtch = string.Join(',', compiles.Select(p => p.match));
+            sb.Append(mtch);
+            return compiles.Where(p => !string.IsNullOrWhiteSpace(p.where)).Select(p => p.where);
+        }
+        IEnumerable<string> BuildMatch()
+        {
+            sb.Append("MATCH ");
+            return Build(matches);
+        }
+        IEnumerable<string> BuildOptionalMatch()
+        {
+            sb.Append("OPTIONAL MATCH ");
+            return Build(optionalMatches);
+        }
     }
 
     protected void BuildMatchPart(StringBuilder sb, ref Dictionary<string, object?> parameters)
@@ -380,4 +409,10 @@ public class MatchQuery : QueryBase
         return this;
     }
     #endregion
+
+    public virtual MatchQuery Distinct()
+    {
+        isDistinct = true;
+        return this;
+    }
 }

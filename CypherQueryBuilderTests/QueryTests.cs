@@ -4,7 +4,7 @@ using System.Text.RegularExpressions;
 
 namespace CypherQueryBuilderTests;
 [TestClass]
-public class QueryTests
+public partial class QueryTests
 {
     [TestMethod]
     public void CompileTest()
@@ -320,5 +320,31 @@ public class QueryTests
         (var str1, var p) = q.CompileWithParemeters();
         Console.WriteLine(str);
         Assert.IsNotNull(str);
+    }
+    [TestMethod]
+    public void CompileMatchReturnDistinctTest()
+    {
+        var uid = Guid.Empty.ToString();
+        var q = Query
+                .Match(Node<Movie>.Instance().Where(p => p.Uid == uid))
+                .Return<Movie>(p => new { p.Title, p.ReleaseYear })
+                .Distinct()
+                .Compile();
+        Console.WriteLine(q);
+        Assert.IsNotNull(q);
+    }
+    [TestMethod]
+    public void CompileMatchChainReturnDistinctTest()
+    {
+        var uid = Guid.Empty.ToString();
+        var q = Query
+                .Match(Node<Movie>.Instance().Where(p => p.Uid == uid).RelatedTo<ActedIn>(Node<Person>.Instance().Where(p => p.FullName == "Tom")))
+                .Return<Movie>(p => new { p.Title, p.ReleaseYear })
+                .Return<ActedIn>(p => p.ReleaseYear)
+                .Return<Person>()
+                .Distinct()
+                .Compile();
+        Console.WriteLine(q);
+        Assert.IsNotNull(q);
     }
 }
