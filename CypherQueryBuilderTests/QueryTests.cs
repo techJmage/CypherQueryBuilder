@@ -4,7 +4,7 @@ using System.Text.RegularExpressions;
 
 namespace CypherQueryBuilderTests;
 [TestClass]
-public class QueryTests
+public partial class QueryTests
 {
     [TestMethod]
     public void CompileTest()

@@ -71,4 +71,13 @@ public static class Query
         nodes.AddRange(otherNodes);
         return new(nodes, toMerge);
     }
+
+    public static MatchQuery OptionalMatch(Node node, params Node[] otherNodes)
+    {
+        HashSet<Node> matches = [node];
+        foreach (var n in otherNodes)
+            matches.Add(n);
+        MatchQuery q = new(matches, true);
+        return q;
+    }
 }
