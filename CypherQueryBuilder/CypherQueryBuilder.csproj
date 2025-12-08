@@ -1,10 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>net9.0</TargetFramework>
+		<TargetFramework>net10.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
-		<Version>1.8.7</Version>
+		<Version>1.8.8</Version>
 		<LangVersion>latest</LangVersion>
 		<Authors>Tech J Mage</Authors>
 		<Description>Cypher, OGM, Query</Description>
@@ -20,15 +20,15 @@
 	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="Currying" Version="1.0.4" />
-		<PackageReference Include="Neo4j.Driver" Version="5.28.0" />
-		<PackageReference Include="DefaultDocumentation" Version="0.8.2">
+		<PackageReference Include="Neo4j.Driver" Version="5.28.4" />
+		<PackageReference Include="DefaultDocumentation" Version="1.2.2">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
 		<PackageReference Include="ExpressionTreeToStringWithCypher" Version="1.1.2" />
-		<PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.13.0" />
-		<PackageReference Include="Microsoft.CodeAnalysis.CSharp.Scripting" Version="4.13.0" />
+		<PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="5.0.0" />
+		<PackageReference Include="Microsoft.CodeAnalysis.CSharp.Scripting" Version="5.0.0" />
 		<PackageReference Include="Utility.Disposable" Version="1.1.2" />
-		<None Include="..\README.md" Pack="true" PackagePath=""/>
+		<None Include="..\README.md" Pack="true" PackagePath="" />
 	</ItemGroup>
 </Project>
