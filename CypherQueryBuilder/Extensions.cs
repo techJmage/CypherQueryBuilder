@@ -71,20 +71,18 @@ public static class Extensions
 
     public static Node<T> AsNode<T>(this T obj, int sequence = 0)
     {
-        var ps = obj.GetType().GetProperties();
+        var ps = obj!.GetType().GetProperties();
         var filtered = ps.Select(p => new
         {
             Name = IEntity.GetCypherName(p),
             Value = p.GetValue(obj)
         });
         var node = new Node<T>(sequence);
-        foreach (var p in filtered)
-            if (!string.IsNullOrEmpty(p.Name))
-                node = node.WithProperty(p.Name, p.Value);
+        filtered?.Where(p => !string.IsNullOrEmpty(p.Name)).ForEach(p => node = node.WithProperty(p.Name, p.Value));
         return node;
     }
 
-    public static Node AsNode<T>(this Type obj, int sequence = 0) => new(obj, sequence);
+    public static Node AsNode(this Type obj, int sequence = 0) => new(obj, sequence);
 
-    public static Relation AsRelation<T>(this Type obj, int sequence = 0) => new(obj, sequence);
+    public static Relation AsRelation(this Type obj, int sequence = 0) => new(obj, sequence);
 }

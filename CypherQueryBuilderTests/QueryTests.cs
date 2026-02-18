@@ -272,7 +272,7 @@ public class QueryTests
         var q = m.ToMatchQuery()
             .Delete(m.Node.Relations.First());
         var str = q.Compile();
-        (var s, var parameters) = q.CompileWithParemeters();
+        var (_, _) = q.CompileWithParemeters();
         Console.WriteLine(str);
         Assert.IsNotNull(str);
     }

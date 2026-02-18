@@ -57,7 +57,6 @@ public class UpdateQuery : MatchQuery
             alias = FindAlias<T>();
         var pMap = typeof(T).GetCypherPropertyMap(alias);
         var property = propertySelector.ToCypherString(pMap);
-        var tk = typeof(K);
         var fn = valueSelector.Compile();
         var v = fn(default);
         updatableValues.Add(property, v);

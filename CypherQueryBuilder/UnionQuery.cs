@@ -53,7 +53,7 @@ public class UnionQuery : MatchQuery
         }
         return (sb.ToString(), parameters);
     }
-    public MatchQuery Union(MatchQuery other)
+    public new MatchQuery Union(MatchQuery other)
     {
         unions.Add(other);
         return this;

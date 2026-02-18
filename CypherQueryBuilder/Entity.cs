@@ -1,4 +1,5 @@
-﻿using System.Diagnostics.CodeAnalysis;
+﻿using Currying;
+using System.Diagnostics.CodeAnalysis;
 using System.Text;
 
 namespace CypherQueryBuilder;
@@ -24,8 +25,6 @@ public class Entity(string alias) : IEntity
     public virtual (string match, string where) Compile(HashSet<string> matchedAliases)
     {
         var alreadyMatched = matchedAliases.Contains(Alias);
-        //if (matchedAliases.Contains(Alias))
-        //    return (string.Empty, string.Empty);
         StringBuilder sb = new();
         var (start, end) = Brackets;
         sb.Append($"{start}{alias}");
@@ -41,6 +40,7 @@ public class Entity(string alias) : IEntity
     /// <summary>
     /// Compiles the specified parameters.
     /// </summary>
+    /// <param name="matchedAliases"></param>
     /// <param name="parameters">The parameters.</param>
     /// <returns></returns>
     public virtual (string match, string where) Compile(HashSet<string> matchedAliases, ref Dictionary<string, object?> parameters)
@@ -68,9 +68,7 @@ public class Entity(string alias) : IEntity
             Name = IEntity.GetCypherName(p),
             Value = p.GetValue(obj)
         });
-        foreach (var p in filtered)
-            if (!string.IsNullOrEmpty(p.Name))
-                AddProperty(p.Name, p.Value);
+        filtered?.Where(p => !string.IsNullOrEmpty(p.Name)).ForEach(p => AddProperty(p.Name, p.Value));
         return this;
     }
 
